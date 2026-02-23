@@ -262,7 +262,7 @@ function App() {
                     <img
                         src="./header-group.jpg"
                         alt="Pub Interior"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent"></div>
                 </div>
