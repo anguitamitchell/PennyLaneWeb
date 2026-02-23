@@ -211,8 +211,9 @@ function App() {
         return (
             <div className="bg-obsidian border border-slate rounded-[2rem] p-8 shadow-2xl h-[300px] flex flex-col justify-between">
                 <div>
-                    <h3 className="text-xl font-bold font-sans text-ivory mb-2">Hours of Operation</h3>
-                    <p className="text-sm font-mono text-liverpoolRed transition-all duration-300">{hoursMap[activeDay]}</p>
+                    <h3 className="text-xl font-bold font-sans text-ivory mb-2">Hours & Location</h3>
+                    <p className="text-sm font-mono text-liverpoolRed transition-all duration-300 mb-1">{hoursMap[activeDay]}</p>
+                    <p className="text-xs text-ivory/60 font-sans">421 E Franklin St, Richmond, VA<br />804-780-1682</p>
                 </div>
                 <div className="relative h-[120px] flex items-end">
                     <div className="w-full flex justify-between relative mx-2">
@@ -240,11 +241,9 @@ function App() {
             <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 rounded-full px-6 py-3 flex items-center gap-8
                 ${scrolled ? 'bg-obsidian/80 backdrop-blur-xl border border-slate shadow-xl' : 'bg-transparent'}
             `}>
-                <div className="font-drama font-bold text-xl tracking-wider text-liverpoolRed italic">Penny Lane</div>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-drama font-bold text-xl tracking-wider text-liverpoolRed italic transition-transform hover:scale-105 cursor-pointer">Penny Lane</a>
                 <div className="hidden md:flex gap-6 text-sm font-sans font-medium">
-                    <a href="#features" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory">Experience</a>
-                    <a href="#philosophy" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory">Philosophy</a>
-                    <a href="#protocol" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory">Protocol</a>
+                    <a href="#features" onClick={(e) => { e.preventDefault(); document.querySelector('#features').scrollIntoView({ behavior: 'smooth' }); }} className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Experience</a>
                 </div>
                 <div className="flex items-center gap-6">
                     <div className="hidden lg:flex items-center gap-4">
