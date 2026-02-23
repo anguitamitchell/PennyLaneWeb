@@ -320,7 +320,7 @@ function App() {
                         <img
                             src="./corner-interior.jpg"
                             alt="Pub Atmosphere"
-                            className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                            className="w-full h-full object-cover transition-all duration-700"
                         />
                     </div>
                 </div>
