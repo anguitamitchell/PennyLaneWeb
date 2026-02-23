@@ -319,7 +319,7 @@ function App() {
                     </div>
                     <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
                         <img
-                            src="./pub-interior.png"
+                            src="./corner-interior.jpg"
                             alt="Pub Atmosphere"
                             className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                         />
