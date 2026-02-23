@@ -332,7 +332,7 @@ function App() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1 relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group">
                         <img
-                            src="./pub-food.png"
+                            src="./guinness-stout.jpg"
                             alt="Proper Pint and Food"
                             className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
                         />
