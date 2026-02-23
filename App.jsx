@@ -260,7 +260,7 @@ function App() {
             <section className="relative h-[100dvh] flex items-end pb-24 md:pb-32 px-6 md:px-16 lg:px-24">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="./header-fans.jpg"
+                        src="./header-group.jpg"
                         alt="Pub Interior"
                         className="w-full h-full object-cover"
                     />
