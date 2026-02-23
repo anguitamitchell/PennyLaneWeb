@@ -91,20 +91,19 @@ function App() {
     // Custom Interactive Components
     // -------------------------------------
 
-    // Feature 1: Diagnostic Shuffler (Live Premier League Top 5)
-    const ShufflerCard = ({ standings }) => {
+    // Feature 1: Diagnostic Shuffler (Drafts on Tap)
+    const ShufflerCard = () => {
         const [items, setItems] = useState([
-            "1. Liverpool - AWAITING DATA",
-            "2. Arsenal - AWAITING DATA",
-            "3. Man City - AWAITING DATA"
+            "Magners Cider",
+            "Fuller's ESB",
+            "Old Speckled Hen",
+            "Carlsberg",
+            "Guinness Stout",
+            "Harp Lager",
+            "Smithwick's Irish Ale",
+            "Firestone Hazy IPA",
+            "Firestone Union Jack IPA"
         ]);
-
-        useEffect(() => {
-            if (standings && standings.length >= 5) {
-                const top5 = standings.slice(0, 5).map(e => `${e.position}. ${e.team.name} - ${e.overall.points} pts`);
-                setItems(top5.reverse()); // Reverse order so #1 is visually on top depending on mapping
-            }
-        }, [standings]);
 
         useEffect(() => {
             const interval = setInterval(() => {
@@ -121,22 +120,22 @@ function App() {
         return (
             <div className="bg-obsidian border border-slate rounded-[2rem] p-8 shadow-2xl relative overflow-hidden h-[300px] flex flex-col justify-between">
                 <div>
-                    <h3 className="text-xl font-bold font-sans text-ivory mb-2">Live Table Top 5</h3>
-                    <p className="text-sm text-ivory/60">Real-time Premier League Standings.</p>
+                    <h3 className="text-xl font-bold font-sans text-ivory mb-2">Drafts on Tap</h3>
+                    <p className="text-sm text-ivory/60">Rotating selection of imports and local favorites.</p>
                 </div>
                 <div className="relative h-[120px]">
-                    {items.map((item, i) => {
-                        const isLfc = item.includes("Liverpool");
+                    {items.slice(0, 5).map((item, i) => {
+                        const isPrimary = i === 0;
                         return (
                             <div key={item}
-                                className={`absolute w-full border p-4 rounded-xl transition-all duration-700 ease-in-out ${isLfc ? 'bg-[#1a0508] border-liverpoolRed/50 shadow-[0_0_15px_rgba(200,16,46,0.2)]' : 'bg-[#111] border-slate'}`}
+                                className={`absolute w-full border p-4 rounded-xl transition-all duration-700 ease-in-out ${isPrimary ? 'bg-[#1a0508] border-liverpoolRed/50 shadow-[0_0_15px_rgba(200,16,46,0.2)] text-liverpoolRed font-bold' : 'bg-[#111] border-slate text-ivory'}`}
                                 style={{
                                     bottom: `${i * 15}px`,
                                     transform: `scale(${1 - (i * 0.05)})`,
                                     opacity: 1 - (i * 0.3),
                                     zIndex: 10 - i
                                 }}>
-                                <span className={`font-drama italic text-lg ${isLfc ? 'text-liverpoolRed font-bold' : 'text-ivory'}`}>{item}</span>
+                                <span className="font-drama italic text-lg">{item}</span>
                             </div>
                         )
                     })}
