@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Penny Lane Pub</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0D0D12',
+                        liverpoolRed: '#C8102E',
+                        ivory: '#FAF8F5',
+                        slate: '#2A2A35'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        drama: ['"Playfair Display"', 'serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0D0D12;
+            color: #FAF8F5;
+            overflow-x: hidden;
+        }
+
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.05;
+        }
+
+        /* Reveal animation for items */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+
+<body class="relative min-h-screen flex flex-col items-center pb-32">
+    <!-- Noise Injector -->
+    <svg class="noise-overlay" xmlns="http://www.w3.org/2000/svg">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+    </svg>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-obsidian/80 backdrop-blur-xl border border-slate shadow-xl rounded-full px-6 py-3 flex items-center gap-8 w-max">
+        <div class="font-drama font-bold text-xl tracking-wider text-liverpoolRed italic">Penny Lane</div>
+        <div class="hidden md:flex gap-6 text-sm font-sans font-medium">
+            <a href="index.html#features"
+                class="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory">Experience</a>
+            <a href="index.html#philosophy"
+                class="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory">Philosophy</a>
+            <a href="index.html#protocol"
+                class="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory">Protocol</a>
+        </div>
+        <a href="index.html"
+            class="bg-liverpoolRed text-white px-5 py-2 rounded-full text-sm font-bold overflow-hidden relative group block hover:scale-105 transition-transform">
+            <span class="relative z-10">Return to Pub</span>
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="w-full text-center pt-32 pb-16 px-6 relative mt-16">
+        <div class="absolute inset-0 bg-slate/5 border-b border-slate -z-10"></div>
+        <h1 class="font-drama italic text-5xl md:text-7xl text-liverpoolRed mb-4 shadow-liverpoolRed drop-shadow-lg">The
+            Fare</h1>
+        <p class="font-sans text-ivory/70 text-lg tracking-widest uppercase">A Taste of Liverpool</p>
+    </header>
+
+    <!-- Menu Container -->
+    <main class="w-full max-w-4xl px-6 md:px-12 mt-16 space-y-24">
+
+        <!-- SALADS & SOUPS -->
+        <section class="animate-fade-in-up" style="animation-delay: 0.1s; opacity: 0;">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px bg-slate flex-1"></div>
+                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic">Salads & Soups</h2>
+                <div class="h-px bg-slate flex-1"></div>
+            </div>
+
+            <div class="space-y-10">
+                <!-- English Garden Salad -->
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">English Garden Salad *</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$5.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Mixed greens, cucumber, carrots, tomato &
+                        red onion served with house made croutons and your choice of dressing</p>
+                </article>
+
+                <!-- Caesar Salad -->
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Caesar Salad *</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$5.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Crisp Romaine, Parmesan, Croutons &
+                        housemade dresssing<br />
+                        <span class="text-liverpoolRed/80 italic text-xs mt-2 block">* Make Entree Salad ADD Protein -
+                            Salmon $9 | Grilled Chicken $7 | Grilled Steak $8</span>
+                    </p>
+                </article>
+
+                <!-- French Onion -->
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Homemade French Onion</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$4.75 cup / $5.49 bowl</span>
+                    </div>
+                </article>
+
+                <!-- Jala Mac -->
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Jala' Mac</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$6.95</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Creamy Mac and Cheese with jalapeno
+                        topped with cheddar and breadcrumbs, baked to perfection</p>
+                </article>
+
+                <!-- Chicken Cobb -->
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken Cobb Salad</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.79</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Bed of mixed green topped with your
+                        choice of crispy or grilled chicken breast, garnished with egg, red onion, tomato, bleu cheese
+                        crumbles & bacon bits</p>
+                </article>
+
+                <!-- Steak Salad -->
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Grilled Steak Salad **</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">5oz of grilled flank steak served on
+                        mixed greens with tomato, red onion & croutons served with balsamic vinaigrette</p>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- HOUSE SPECIALTIES -->
+        <section class="animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px bg-slate flex-1"></div>
+                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic">House Specialties</h2>
+                <div class="h-px bg-slate flex-1"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Cottage Pie</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Seasoned ground beef with diced carrots
+                        baked in a casserole, topped with peas & whipped potatoes</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Bangers ‘N’ Mash</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$16.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">English sausages with gravy and garlic
+                        mashed potatoes & vegetable medley</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Fish ‘N’ Chips</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$14.50</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">A British staple served up by true
+                        Liverpudlians. Flaky white fish deep fried in our homemade beer batter. Served with peas and
+                        “chips”</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Thai Chicken Curry</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Yellow curry with potatoes, peas and
+                        chicken served over rice.<br />
+                        <span class="italic text-xs block mt-1">Served American (milder), English style (hot) or
+                            traditional (fire)</span>
+                    </p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Beckham & Owen</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$15.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">England’s classic scoring combination
+                        served up! Pork sausage roll & beef Cornish pasty with garlic mashed potatoes & vegetable medley
+                    </p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Butter Chicken</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Indian curry staple, tomato based, mild
+                        heat served over rice.<br />
+                        <span class="italic text-xs block mt-1">Served American (milder), English style (hot) or
+                            traditional (fire)</span>
+                    </p>
+                </article>
+
+                <article class="group md:col-span-2">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Miso Marinated Salmon</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Salmon filet, baked & topped with
+                        wasabi-dill yogurt sauce. Served on rice pilaf with vegetable medley</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- UTTIES / SANDWICHES -->
+        <section class="animate-fade-in-up" style="animation-delay: 0.3s; opacity: 0;">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="h-px bg-slate flex-1"></div>
+                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic text-center">Utties / Sandwiches</h2>
+                <div class="h-px bg-slate flex-1"></div>
+            </div>
+            <p class="text-center font-sans text-ivory/50 text-sm mb-12 italic uppercase tracking-widest">All served
+                with “chips” (fries)</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Big Duke **</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">8oz. fresh Angus beef grilled to medium
+                        or well done with lettuce, tomato, red onion, pickle</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken Sandwich</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">
+                        <strong>GRILLED:</strong> Marinated in spiced balsamic on Kaiser roll<br />
+                        <strong>FRIED:</strong> Spicy buttermilk, country seasoning, honey ranch on brioche<br />
+                        <span class="italic text-xs block mt-1">Both topped with lettuce, tomato, red onion,
+                            pickle</span>
+                    </p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Veggie Burger</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Topped with lettuce, tomato, red onion &
+                        pickle</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">“Grown Up” Grilled Cheese</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Sourdough slathered with parmesan garlic
+                        butter and filled with Muenster & Havarti cheese</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">London Broil Sandwich</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Rare, thinly sliced London Broil, Swiss
+                        cheese & horseradish aioli served hot on Brioche Bun with au jus for dipping</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Classic Reuben</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$13.49</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Shaved corned beef, Swiss and sauerkraut
+                        with thousand island dressing on thick rye bread</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">English Sailor</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$16.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Reuben plus a banger. Try it with Terry’s
+                        spicy mustard!</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Panini Special</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Pastrami and Swiss with coleslaw and
+                        Russian Dressing. Served with pickle</p>
+                </article>
+            </div>
+
+            <div
+                class="mt-8 border border-slate/50 rounded-lg p-4 bg-slate/10 text-center font-mono text-ivory/70 text-sm flex justify-center gap-6">
+                <span>Add Bacon: $2.00</span>
+                <span class="text-liverpoolRed/30 hidden md:block">|</span>
+                <span>Add Cheese: $2.00 <span class="text-xs opacity-70">(Cheddar, Swiss or Bleu)</span></span>
+                <span class="text-liverpoolRed/30 hidden md:block">|</span>
+                <span>Add Tomato: $1.00</span>
+            </div>
+        </section>
+
+
+        <!-- PUB GRUB -->
+        <section class="animate-fade-in-up" style="animation-delay: 0.4s; opacity: 0;">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="h-px bg-slate flex-1"></div>
+                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic text-center">Pub Grub</h2>
+                <div class="h-px bg-slate flex-1"></div>
+            </div>
+            <p class="text-center font-sans text-ivory/50 text-sm mb-12 italic uppercase tracking-widest">For late
+                nights</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Irish Cheese Fries</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Waffle fries covered with cheese sauce,
+                        bacon bits & green onions</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken Wings</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$11.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Plain, Buffalo, Korean BBQ or
+                        Chipotle/Maple</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Mozzarella Sticks</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$10.29</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Served with marinara sauce</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Hummus Plate</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">A helping of plain and roasted red pepper
+                        hummus served with carrots, cucumbers, red peppers & pita chips</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Bavarian Pretzel</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Salted Pretzel bites with a homemade
+                        spicy, beer-cheese sauce for dipping</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Curry Fries</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$7.29</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">“Chips” smothered in curry sauce</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Spinach Dip</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Baby spinach, artichoke hearts, parmesan
+                        & cream cheese served with pita chips</p>
+                </article>
+
+                <article class="group">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken and Chips</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Three tenders & Fries<br />
+                        Plain, Buffalo, Korean BBQ or Chipotle / Maple</p>
+                </article>
+
+                <article class="group md:col-span-2">
+                    <div
+                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                        <h3 class="font-sans font-bold text-xl text-ivory">Will & Kate Plate</h3>
+                        <span class="font-mono text-liverpoolRed font-bold">$11.99</span>
+                    </div>
+                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Sausage roll & Cornish pastie served with
+                        a cup of gravy</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Back link -->
+    <div class="mt-24">
+        <a href="index.html"
+            class="inline-flex items-center gap-2 text-ivory hover:text-liverpoolRed font-mono text-sm transition-colors border border-slate/50 hover:border-liverpoolRed/50 rounded-full px-6 py-3 bg-slate/10">
+            ← Return to Pub
+        </a>
+    </div>
+
+</body>
+
+</html>

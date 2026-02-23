@@ -1,0 +1,962 @@
+{
+    "pageInfo": {
+        "page": 0,
+        "numPages": 2,
+        "pageSize": 10,
+        "numEntries": 11
+    },
+    "content": [
+        {
+            "gameweek": {
+                "id": 19497.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 28.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1772290800000.0,
+                "label": "Sat 28 Feb 2026, 15:00 GMT"
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1772290800000.0,
+                "label": "Sat 28 Feb 2026, 15:00 GMT"
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "West Ham United",
+                        "club": {
+                            "name": "West Ham United",
+                            "shortName": "West Ham",
+                            "abbr": "WHU",
+                            "id": 25.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "West Ham",
+                        "id": 25.0,
+                        "altIds": {
+                            "opta": "t21"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Anfield",
+                "city": "Liverpool",
+                "source": "OPTA",
+                "id": 7305.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125067.0,
+            "altIds": {
+                "opta": "g2562171"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19498.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 29.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1772568900000.0,
+                "label": "Tue 3 Mar 2026, 20:15 GMT"
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1772568900000.0,
+                "label": "Tue 3 Mar 2026, 20:15 GMT"
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Wolverhampton Wanderers",
+                        "club": {
+                            "name": "Wolverhampton Wanderers",
+                            "shortName": "Wolves",
+                            "abbr": "WOL",
+                            "id": 38.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Wolves",
+                        "id": 38.0,
+                        "altIds": {
+                            "opta": "t39"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Molineux Stadium",
+                "city": "Wolverhampton",
+                "source": "OPTA",
+                "id": 9432.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125080.0,
+            "altIds": {
+                "opta": "g2562184"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19499.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 30.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1773592200000.0,
+                "label": "Sun 15 Mar 2026, 16:30 GMT"
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1773592200000.0,
+                "label": "Sun 15 Mar 2026, 16:30 GMT"
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Tottenham Hotspur",
+                        "club": {
+                            "name": "Tottenham Hotspur",
+                            "shortName": "Spurs",
+                            "abbr": "TOT",
+                            "id": 21.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Spurs",
+                        "id": 21.0,
+                        "altIds": {
+                            "opta": "t6"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Anfield",
+                "city": "Liverpool",
+                "source": "OPTA",
+                "id": 7305.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125086.0,
+            "altIds": {
+                "opta": "g2562190"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19500.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 31.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1774096200000.0,
+                "label": "Sat 21 Mar 2026, 12:30 GMT"
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1774096200000.0,
+                "label": "Sat 21 Mar 2026, 12:30 GMT"
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Brighton & Hove Albion",
+                        "club": {
+                            "name": "Brighton and Hove Albion",
+                            "shortName": "Brighton",
+                            "abbr": "BHA",
+                            "id": 131.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Brighton",
+                        "id": 131.0,
+                        "altIds": {
+                            "opta": "t36"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "American Express Stadium",
+                "city": "Falmer",
+                "source": "OPTA",
+                "id": 7306.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125093.0,
+            "altIds": {
+                "opta": "g2562197"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19501.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 32.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1775916000000.0,
+                "label": "Sat 11 Apr 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1775916000000.0,
+                "label": "Sat 11 Apr 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Fulham",
+                        "club": {
+                            "name": "Fulham",
+                            "shortName": "Fulham",
+                            "abbr": "FUL",
+                            "id": 34.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Fulham",
+                        "id": 34.0,
+                        "altIds": {
+                            "opta": "t54"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Anfield",
+                "city": "Liverpool",
+                "source": "OPTA",
+                "id": 7305.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125106.0,
+            "altIds": {
+                "opta": "g2562210"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19502.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 33.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1776520800000.0,
+                "label": "Sat 18 Apr 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1776520800000.0,
+                "label": "Sat 18 Apr 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Everton",
+                        "club": {
+                            "name": "Everton",
+                            "shortName": "Everton",
+                            "abbr": "EVE",
+                            "id": 7.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Everton",
+                        "id": 7.0,
+                        "altIds": {
+                            "opta": "t11"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Hill Dickinson Stadium",
+                "city": "Liverpool",
+                "source": "OPTA",
+                "id": 9308.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125115.0,
+            "altIds": {
+                "opta": "g2562219"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19503.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 34.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1777125600000.0,
+                "label": "Sat 25 Apr 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1777125600000.0,
+                "label": "Sat 25 Apr 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Crystal Palace",
+                        "club": {
+                            "name": "Crystal Palace",
+                            "shortName": "Crystal Palace",
+                            "abbr": "CRY",
+                            "id": 6.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Crystal Palace",
+                        "id": 6.0,
+                        "altIds": {
+                            "opta": "t31"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Anfield",
+                "city": "Liverpool",
+                "source": "OPTA",
+                "id": 7305.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125126.0,
+            "altIds": {
+                "opta": "g2562230"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19504.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 35.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1777730400000.0,
+                "label": "Sat 2 May 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1777730400000.0,
+                "label": "Sat 2 May 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Manchester United",
+                        "club": {
+                            "name": "Manchester United",
+                            "shortName": "Man Utd",
+                            "abbr": "MUN",
+                            "id": 12.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Man Utd",
+                        "id": 12.0,
+                        "altIds": {
+                            "opta": "t1"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Old Trafford",
+                "city": "Manchester",
+                "source": "OPTA",
+                "id": 42.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125138.0,
+            "altIds": {
+                "opta": "g2562242"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19505.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 36.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1778335200000.0,
+                "label": "Sat 9 May 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1778335200000.0,
+                "label": "Sat 9 May 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Chelsea",
+                        "club": {
+                            "name": "Chelsea",
+                            "shortName": "Chelsea",
+                            "abbr": "CHE",
+                            "id": 4.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Chelsea",
+                        "id": 4.0,
+                        "altIds": {
+                            "opta": "t8"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Anfield",
+                "city": "Liverpool",
+                "source": "OPTA",
+                "id": 7305.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125145.0,
+            "altIds": {
+                "opta": "g2562249"
+            }
+        },
+        {
+            "gameweek": {
+                "id": 19506.0,
+                "compSeason": {
+                    "label": "2025/26",
+                    "competition": {
+                        "abbreviation": "EN_PR",
+                        "description": "Premier League",
+                        "level": "SEN",
+                        "source": "",
+                        "id": 1.0,
+                        "altIds": {
+                            "opta": "8"
+                        }
+                    },
+                    "id": 777.0
+                },
+                "gameweek": 37.0,
+                "competitionPhase": {
+                    "id": 8057.0,
+                    "type": "L",
+                    "gameweekRange": [
+                        1.0,
+                        38.0
+                    ]
+                }
+            },
+            "kickoff": {
+                "completeness": 3.0,
+                "millis": 1779026400000.0,
+                "label": "Sun 17 May 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "provisionalKickoff": {
+                "completeness": 3.0,
+                "millis": 1779026400000.0,
+                "label": "Sun 17 May 2026, 15:00 BST",
+                "gmtOffset": 1.0
+            },
+            "teams": [
+                {
+                    "team": {
+                        "name": "Aston Villa",
+                        "club": {
+                            "name": "Aston Villa",
+                            "shortName": "Aston Villa",
+                            "abbr": "AVL",
+                            "id": 2.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Aston Villa",
+                        "id": 2.0,
+                        "altIds": {
+                            "opta": "t7"
+                        }
+                    }
+                },
+                {
+                    "team": {
+                        "name": "Liverpool",
+                        "club": {
+                            "name": "Liverpool",
+                            "shortName": "Liverpool",
+                            "abbr": "LIV",
+                            "id": 10.0
+                        },
+                        "teamType": "FIRST",
+                        "shortName": "Liverpool",
+                        "id": 10.0,
+                        "altIds": {
+                            "opta": "t14"
+                        }
+                    }
+                }
+            ],
+            "replay": false,
+            "ground": {
+                "name": "Villa Park",
+                "city": "Birmingham",
+                "source": "OPTA",
+                "id": 1986.0
+            },
+            "neutralGround": false,
+            "status": "U",
+            "phase": "0",
+            "fixtureType": "REGULAR",
+            "extraTime": false,
+            "shootout": false,
+            "goals": [],
+            "penaltyShootouts": [],
+            "behindClosedDoors": false,
+            "id": 125152.0,
+            "altIds": {
+                "opta": "g2562257"
+            }
+        }
+    ]
+}
