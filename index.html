@@ -84,12 +84,30 @@
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #C8102E;
+            padding-bottom: 2rem;
+        }
+
+        /* Page Transitions */
+        .page-transition-enter {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        .page-transition-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 300ms ease-out, transform 300ms ease-out;
+        }
+
+        .page-transition-exit {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 300ms ease-in, transform 300ms ease-in;
         }
     </style>
 </head>
 
-<body>
+<body class="page-transition-enter">
 
     <!-- CSS Global Noise Injector -->
     <svg class="noise-overlay" xmlns="http://www.w3.org/2000/svg">
@@ -118,6 +136,7 @@
     <!-- Main React App code -->
     <script type="text/babel" src="App.jsx"></script>
 
+    <script src="transitions.js"></script>
 </body>
 
 </html>

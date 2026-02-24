@@ -173,6 +173,25 @@
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 140px;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Page Transitions */
+        .page-transition-enter {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        .page-transition-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 300ms ease-out, transform 300ms ease-out;
+        }
+
+        .page-transition-exit {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 300ms ease-in, transform 300ms ease-in;
         }
     </style>
 
@@ -733,13 +752,14 @@
     </main>
 
     <!-- Footer Back link -->
-    <div class="mt-24">
+    <footer class="mt-24">
         <a href="index.html"
             class="inline-flex items-center gap-2 text-ivory hover:text-liverpoolRed font-mono text-sm transition-colors border border-slate/50 hover:border-liverpoolRed/50 rounded-full px-6 py-3 bg-slate/10">
             ← Return to Pub
         </a>
-    </div>
+    </footer>
 
+    <script src="transitions.js"></script>
 </body>
 
 </html>
