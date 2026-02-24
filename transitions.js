@@ -1,11 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. On page load, apply the 'enter' class immediately to trigger the entry animation
-    document.body.classList.add('page-transition-enter');
+    const wrapper = document.getElementById('transition-wrapper');
 
-    // Briefly delay adding the 'active' class so the browser has time to register the initial state
-    setTimeout(() => {
-        document.body.classList.add('page-transition-enter-active');
-    }, 10);
+    if (wrapper) {
+        // 1. On page load, apply the 'enter' class immediately to trigger the entry animation
+        wrapper.classList.add('page-transition-enter');
+
+        // Briefly delay adding the 'active' class so the browser has time to register the initial state
+        setTimeout(() => {
+            wrapper.classList.add('page-transition-enter-active');
+        }, 10);
+    }
 
     // 2. Intercept internal link clicks to trigger the exit animation before navigating
     const links = document.querySelectorAll('a[href]');
@@ -45,8 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Trigger the exit animation by removing the enter-active class and adding the exit class
-            document.body.classList.remove('page-transition-enter-active');
-            document.body.classList.add('page-transition-exit');
+            if (wrapper) {
+                wrapper.classList.remove('page-transition-enter-active');
+                wrapper.classList.add('page-transition-exit');
+            }
 
             // Wait for the animation to finish (e.g., 300ms) before actually setting window.location
             setTimeout(() => {
