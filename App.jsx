@@ -113,12 +113,12 @@ function App() {
                     newArr.unshift(last);
                     return newArr;
                 });
-            }, 3000);
+            }, 5000);
             return () => clearInterval(interval);
         }, []);
 
         return (
-            <div className="bg-obsidian border border-slate rounded-[2rem] p-8 shadow-2xl relative overflow-hidden h-[300px] flex flex-col justify-between">
+            <div className="bg-obsidian border border-slate rounded-[2rem] p-8 shadow-2xl relative overflow-hidden h-[340px] flex flex-col justify-between">
                 <div>
                     <h3 className="text-xl font-bold font-sans text-ivory mb-2">Drafts on Tap</h3>
                     <p className="text-sm text-ivory/60">Rotating selection of imports and local favorites.</p>
@@ -162,14 +162,14 @@ function App() {
                     newArr.unshift(last);
                     return newArr;
                 });
-            }, 3500);
+            }, 5000);
             return () => clearInterval(interval);
         }, []);
 
         return (
-            <div className="bg-obsidian border border-slate rounded-[2rem] p-8 shadow-2xl relative overflow-hidden h-[300px] flex flex-col justify-between">
+            <div className="bg-obsidian border border-slate rounded-[2rem] p-8 shadow-2xl relative overflow-hidden h-[340px] flex flex-col justify-between">
                 <div>
-                    <h3 className="text-xl font-bold font-sans text-ivory mb-2">Pub Grub</h3>
+                    <h3 className="text-xl font-bold font-sans text-ivory mb-2">Select Specialties</h3>
                     <p className="text-sm text-ivory/60">A rotating selection of our authentic fare.</p>
                 </div>
                 <div className="relative h-[130px]">
