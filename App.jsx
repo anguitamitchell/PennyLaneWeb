@@ -408,7 +408,7 @@ function App() {
                             <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">British Classics.</h2>
                         </div>
                         <p className="font-sans text-ivory/70 text-lg leading-relaxed mb-4">
-                            Our draft lines flow with the finest imports straight from the UK. Pair your pint with our renowned savory Shepherd's Pie with golden mash, or the flawlessly battered, classic Fish & Chips. No shortcuts, just authentic English comfort food.
+                            Our draft lines flow with the finest imports straight from the UK. Pair your pint with our renowned savory Cottage Pie with golden mash, or the flaky white fish deep fried in our homemade beer batter, classic Fish & Chips.
                         </p>
                         <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6 w-full max-w-[800px]">
                             <ShufflerCard />
