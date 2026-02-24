@@ -470,11 +470,16 @@ function App() {
                     </div>
                     <div className="grid grid-cols-2 gap-12 font-sans">
                         <div>
-                            <h4 className="text-ivory font-bold mb-4">Location</h4>
+                            <h4 className="text-ivory font-bold mb-4">Contact & Location</h4>
                             <ul className="text-ivory/60 space-y-2 text-sm">
                                 <li>421 East Franklin Street</li>
                                 <li>Richmond, VA 23219</li>
-                                <li>804-780-1682</li>
+                                <li>
+                                    <a href="tel:8047801682" className="hover:text-liverpoolRed transition-colors">804-780-1682</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:PennyLanePubRVA@gmail.com" className="hover:text-liverpoolRed transition-colors break-all">PennyLanePubRVA@gmail.com</a>
+                                </li>
                             </ul>
                         </div>
                         <div>
