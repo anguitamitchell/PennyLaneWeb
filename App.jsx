@@ -295,8 +295,9 @@ function App() {
                 ${scrolled ? 'bg-obsidian/80 backdrop-blur-xl border border-slate shadow-xl' : 'bg-transparent'}
             `}>
                 <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-drama font-bold text-xl tracking-wider text-liverpoolRed italic transition-transform hover:scale-105 cursor-pointer">Penny Lane</a>
-                <div className="hidden md:flex gap-6 text-sm font-sans font-medium">
+                <div className="hidden md:flex gap-6 text-sm font-sans font-medium items-center">
                     <a href="#features" onClick={(e) => { e.preventDefault(); document.querySelector('#features').scrollIntoView({ behavior: 'smooth' }); }} className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Experience</a>
+                    <a href="events.html" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Events</a>
                 </div>
                 <div className="flex items-center gap-6">
                     <div className="hidden lg:flex items-center gap-4">
