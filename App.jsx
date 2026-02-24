@@ -172,19 +172,19 @@ function App() {
                     <h3 className="text-xl font-bold font-sans text-ivory mb-2">Select Specialties</h3>
                     <p className="text-sm text-ivory/60">A rotating selection of our authentic fare.</p>
                 </div>
-                <div className="relative h-[130px]">
+                <div className="relative h-[120px]">
                     {items.slice(0, 5).map((item, i) => {
                         const isPrimary = i === 0;
                         return (
                             <div key={item.name}
-                                className={`absolute w-full border p-4 rounded-xl transition-all duration-700 ease-in-out flex flex-col justify-center ${isPrimary ? 'bg-[#1a0508] border-liverpoolRed/50 shadow-[0_0_15px_rgba(200,16,46,0.2)]' : 'bg-[#111] border-slate text-ivory'}`}
+                                className={`absolute w-full border p-4 rounded-xl transition-all duration-700 ease-in-out ${isPrimary ? 'bg-[#1a0508] border-liverpoolRed/50 shadow-[0_0_15px_rgba(200,16,46,0.2)] text-liverpoolRed font-bold' : 'bg-[#111] border-slate text-ivory'}`}
                                 style={{
                                     bottom: `${i * 15}px`,
                                     transform: `scale(${1 - (i * 0.05)})`,
                                     opacity: 1 - (i * 0.3),
                                     zIndex: 10 - i
                                 }}>
-                                <span className={`font-drama italic text-lg ${isPrimary ? 'text-liverpoolRed font-bold' : 'text-ivory'}`}>{item.name}</span>
+                                <span className="font-drama italic text-lg">{item.name}</span>
                             </div>
                         )
                     })}
