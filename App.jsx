@@ -418,29 +418,32 @@ function App() {
                 </div>
             </section>
 
-            {/* --- MATCHDAY (Live Football Data) --- */}
+            {/* --- BEN'S FRIENDS --- */}
             <section className="py-32 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto relative">
                 <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-liverpoolRed/5 blur-[150px] rounded-full pointer-events-none"></div>
 
-                <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">
-                    <span className="font-mono text-liverpoolRed border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">THE RED WALL</span>
-                    <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">The Authentic Matchday Ritual.</h2>
-                    <p className="font-sans text-ivory/70 text-lg leading-relaxed">
-                        No delays. No buffering. We broadcast every English Premier League match live. The atmosphere here is as close to Anfield as you can get on this side of the Atlantic.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
-                    <TypewriterCard lfcStats={lfcStats} nextMatch={nextMatch} />
-                    <div className="h-[300px] rounded-[2rem] overflow-hidden shadow-2xl relative group">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+                    <div className="bg-obsidian border border-slate p-12 rounded-[2rem] shadow-2xl flex items-center justify-center">
                         <img
-                            src="https://images.unsplash.com/photo-1522778526097-ce0a22ceb653?q=80&w=2670&auto=format&fit=crop"
-                            alt="Matchday Atmosphere"
-                            className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                            src="./bens-friends-logo.png"
+                            alt="Ben's Friends Logo"
+                            className="max-w-xs w-full object-contain"
                         />
-                        <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent">
-                            <p className="font-mono text-liverpoolRed text-xl border-l-4 border-liverpoolRed pl-4">YOU'LL NEVER WALK ALONE</p>
-                        </div>
+                    </div>
+                    <div className="space-y-6">
+                        <span className="font-mono text-liverpoolRed border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">COMMUNITY</span>
+                        <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">Ben’s Friends Meet at the Pub on Mondays.</h2>
+                        <p className="font-sans text-ivory/70 text-lg leading-relaxed">
+                            Ben’s Friends is a support group for food and beverage industry professionals who struggle with addiction and substance abuse.
+                        </p>
+                        <a
+                            href="https://www.bensfriendshope.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 mt-4 text-ivory hover:text-liverpoolRed font-mono text-sm transition-colors border border-slate/50 hover:border-liverpoolRed/50 rounded-full px-6 py-3 bg-slate/10"
+                        >
+                            Learn More About Ben's Friends <span className="text-liverpoolRed ml-2">→</span>
+                        </a>
                     </div>
                 </div>
             </section>
