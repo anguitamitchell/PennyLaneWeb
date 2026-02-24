@@ -107,7 +107,7 @@
     </style>
 </head>
 
-<body class="page-transition-enter">
+<body class="bg-obsidian text-ivory">
 
     <!-- CSS Global Noise Injector -->
     <svg class="noise-overlay" xmlns="http://www.w3.org/2000/svg">
@@ -117,24 +117,26 @@
         <rect width="100%" height="100%" filter="url(#noiseFilter)" />
     </svg>
 
-    <div id="root"></div>
+    <div id="transition-wrapper" class="page-transition-enter">
+        <div id="root"></div>
 
-    <!-- React and ReactDOM CDNs -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <!-- React and ReactDOM CDNs -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
-    <!-- Babel for in-browser JSX parsing -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- Babel for in-browser JSX parsing -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- GSAP and ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <!-- GSAP and ScrollTrigger -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-    <!-- Lucide Icons (Browser version) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+        <!-- Lucide Icons (Browser version) -->
+        <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Main React App code -->
-    <script type="text/babel" src="App.jsx"></script>
+        <!-- Main React App code -->
+        <script type="text/babel" src="App.jsx"></script>
+    </div>
 
     <script src="transitions.js"></script>
 </body>

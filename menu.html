@@ -69,7 +69,7 @@
     </style>
 </head>
 
-<body class="relative min-h-screen flex flex-col items-center pb-32">
+<body class="selection:bg-liverpoolRed selection:text-white">
     <!-- Noise Injector -->
     <svg class="noise-overlay" xmlns="http://www.w3.org/2000/svg">
         <filter id="noiseFilter">
@@ -128,636 +128,663 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="w-full text-center pt-32 pb-16 px-6 relative mt-16">
-        <div class="absolute inset-0 bg-slate/5 border-b border-slate -z-10"></div>
-        <h1 class="font-drama italic text-5xl md:text-7xl text-liverpoolRed mb-4 shadow-liverpoolRed drop-shadow-lg">The
-            Fare</h1>
-        <p class="font-sans text-ivory/70 text-lg tracking-widest uppercase">A Taste of Liverpool</p>
-    </header>
+    <div id="transition-wrapper" class="page-transition-enter">
+        <!-- Header -->
+        <header class="w-full text-center pt-32 pb-16 px-6 relative mt-16">
+            <div class="absolute inset-0 bg-slate/5 border-b border-slate -z-10"></div>
+            <h1
+                class="font-drama italic text-5xl md:text-7xl text-liverpoolRed mb-4 shadow-liverpoolRed drop-shadow-lg">
+                The
+                Fare</h1>
+            <p class="font-sans text-ivory/70 text-lg tracking-widest uppercase">A Taste of Liverpool</p>
+        </header>
 
-    <!-- Sub-Navigation -->
-    <div class="sticky top-24 z-40 w-full flex justify-center px-4 py-4 pointer-events-none transition-all duration-300"
-        id="subnav-container">
-        <ul
-            class="flex flex-wrap justify-center gap-2 md:gap-6 bg-obsidian/90 backdrop-blur-xl border border-slate shadow-xl rounded-full px-6 py-3 pointer-events-auto w-max max-w-full overflow-x-auto hide-scrollbar">
-            <li><a href="#salads-soups"
-                    class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Salads
-                    & Soups</a></li>
-            <li><a href="#specialties"
-                    class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Specialties</a>
-            </li>
-            <li><a href="#sandwiches"
-                    class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Sandwiches</a>
-            </li>
-            <li><a href="#pub-grub"
-                    class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Pub
-                    Grub</a></li>
-            <li><a href="#drinks"
-                    class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Drinks</a>
-            </li>
-        </ul>
-    </div>
+        <!-- Sub-Navigation -->
+        <div class="sticky top-24 z-40 w-full flex justify-center px-4 py-4 pointer-events-none transition-all duration-300"
+            id="subnav-container">
+            <ul
+                class="flex flex-wrap justify-center gap-2 md:gap-6 bg-obsidian/90 backdrop-blur-xl border border-slate shadow-xl rounded-full px-6 py-3 pointer-events-auto w-max max-w-full overflow-x-auto hide-scrollbar">
+                <li><a href="#salads-soups"
+                        class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Salads
+                        & Soups</a></li>
+                <li><a href="#specialties"
+                        class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Specialties</a>
+                </li>
+                <li><a href="#sandwiches"
+                        class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Sandwiches</a>
+                </li>
+                <li><a href="#pub-grub"
+                        class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Pub
+                        Grub</a></li>
+                <li><a href="#drinks"
+                        class="text-xs md:text-sm font-sans font-medium text-ivory/80 hover:text-liverpoolRed transition-colors whitespace-nowrap">Drinks</a>
+                </li>
+            </ul>
+        </div>
 
-    <style>
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
+        <style>
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
 
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
 
-        /* Offset for fixed headers when jumping to anchors */
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 140px;
-            backdrop-filter: blur(8px);
-        }
+            /* Offset for fixed headers when jumping to anchors */
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 140px;
+                backdrop-filter: blur(8px);
+            }
 
-        /* Page Transitions */
-        .page-transition-enter {
-            opacity: 0;
-            transform: translateY(15px);
-        }
+            /* Page Transitions */
+            .page-transition-enter {
+                opacity: 0;
+                transform: translateY(15px);
+            }
 
-        .page-transition-enter-active {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 300ms ease-out, transform 300ms ease-out;
-        }
+            .page-transition-enter-active {
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity 300ms ease-out, transform 300ms ease-out;
+            }
 
-        .page-transition-exit {
-            opacity: 0;
-            transform: translateY(15px);
-            transition: opacity 300ms ease-in, transform 300ms ease-in;
-        }
-    </style>
+            .page-transition-exit {
+                opacity: 0;
+                transform: translateY(15px);
+                transition: opacity 300ms ease-in, transform 300ms ease-in;
+            }
+        </style>
 
-    <!-- Menu Container -->
-    <main class="w-full max-w-4xl px-6 md:px-12 space-y-24 mt-8">
+        <!-- Menu Container -->
+        <main class="w-full max-w-4xl px-6 md:px-12 space-y-24 mt-8">
 
-        <!-- SALADS & SOUPS -->
-        <section id="salads-soups" class="animate-fade-in-up" style="animation-delay: 0.1s; opacity: 0;">
-            <div class="flex items-center gap-4 mb-12">
-                <div class="h-px bg-slate flex-1"></div>
-                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic">Salads & Soups</h2>
-                <div class="h-px bg-slate flex-1"></div>
-            </div>
-
-            <div class="space-y-10">
-                <!-- English Garden Salad -->
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">English Garden Salad *</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$5.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Mixed greens, cucumber, carrots, tomato &
-                        red onion served with house made croutons and your choice of dressing</p>
-                </article>
-
-                <!-- Caesar Salad -->
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Caesar Salad *</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$5.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Crisp Romaine, Parmesan, Croutons &
-                        housemade dresssing<br />
-                        <span class="text-liverpoolRed/80 italic text-xs mt-2 block">* Make Entree Salad ADD Protein -
-                            Salmon $9 | Grilled Chicken $7 | Grilled Steak $8</span>
-                    </p>
-                </article>
-
-                <!-- French Onion -->
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Homemade French Onion</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$4.75 cup / $5.49 bowl</span>
-                    </div>
-                </article>
-
-                <!-- Jala Mac -->
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Jala' Mac</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$6.95</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Creamy Mac and Cheese with jalapeno
-                        topped with cheddar and breadcrumbs, baked to perfection</p>
-                </article>
-
-                <!-- Chicken Cobb -->
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken Cobb Salad</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.79</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Bed of mixed green topped with your
-                        choice of crispy or grilled chicken breast, garnished with egg, red onion, tomato, bleu cheese
-                        crumbles & bacon bits</p>
-                </article>
-
-                <!-- Steak Salad -->
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Grilled Steak Salad **</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">5oz of grilled flank steak served on
-                        mixed greens with tomato, red onion & croutons served with balsamic vinaigrette</p>
-                </article>
-            </div>
-        </section>
-
-
-        <!-- HOUSE SPECIALTIES -->
-        <section id="specialties" class="animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
-            <div class="flex items-center gap-4 mb-12">
-                <div class="h-px bg-slate flex-1"></div>
-                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic">House Specialties</h2>
-                <div class="h-px bg-slate flex-1"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Cottage Pie</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Seasoned ground beef with diced carrots
-                        baked in a casserole, topped with peas & whipped potatoes</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Bangers ‘N’ Mash</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$16.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">English sausages with gravy and garlic
-                        mashed potatoes & vegetable medley</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Fish ‘N’ Chips</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$14.50</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">A British staple served up by true
-                        Liverpudlians. Flaky white fish deep fried in our homemade beer batter. Served with peas and
-                        “chips”</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Thai Chicken Curry</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Yellow curry with potatoes, peas and
-                        chicken served over rice.<br />
-                        <span class="italic text-xs block mt-1">Served American (milder), English style (hot) or
-                            traditional (fire)</span>
-                    </p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Beckham & Owen</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$15.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">England’s classic scoring combination
-                        served up! Pork sausage roll & beef Cornish pasty with garlic mashed potatoes & vegetable medley
-                    </p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Butter Chicken</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Indian curry staple, tomato based, mild
-                        heat served over rice.<br />
-                        <span class="italic text-xs block mt-1">Served American (milder), English style (hot) or
-                            traditional (fire)</span>
-                    </p>
-                </article>
-
-                <article class="group md:col-span-2">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Miso Marinated Salmon</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Salmon filet, baked & topped with
-                        wasabi-dill yogurt sauce. Served on rice pilaf with vegetable medley</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- BUTTIES / SANDWICHES -->
-        <section id="sandwiches" class="animate-fade-in-up" style="animation-delay: 0.3s; opacity: 0;">
-            <div class="flex items-center gap-4 mb-4">
-                <div class="h-px bg-slate flex-1"></div>
-                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic text-center">Butties / Sandwiches</h2>
-                <div class="h-px bg-slate flex-1"></div>
-            </div>
-            <p class="text-center font-sans text-ivory/50 text-sm mb-12 italic uppercase tracking-widest">All served
-                with “chips” (fries)</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Big Duke **</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">8oz. fresh Angus beef grilled to medium
-                        or well done with lettuce, tomato, red onion, pickle</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken Sandwich</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">
-                        <strong>GRILLED:</strong> Marinated in spiced balsamic on Kaiser roll<br />
-                        <strong>FRIED:</strong> Spicy buttermilk, country seasoning, honey ranch on brioche<br />
-                        <span class="italic text-xs block mt-1">Both topped with lettuce, tomato, red onion,
-                            pickle</span>
-                    </p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Veggie Burger</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Topped with lettuce, tomato, red onion &
-                        pickle</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">“Grown Up” Grilled Cheese</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Sourdough slathered with parmesan garlic
-                        butter and filled with Muenster & Havarti cheese</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">London Broil Sandwich</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Rare, thinly sliced London Broil, Swiss
-                        cheese & horseradish aioli served hot on Brioche Bun with au jus for dipping</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Classic Reuben</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$13.49</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Shaved corned beef, Swiss and sauerkraut
-                        with thousand island dressing on thick rye bread</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">English Sailor</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$16.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Reuben plus a banger. Try it with Terry’s
-                        spicy mustard!</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Panini Special</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Pastrami and Swiss with coleslaw and
-                        Russian Dressing. Served with pickle</p>
-                </article>
-            </div>
-
-            <div
-                class="mt-8 border border-slate/50 rounded-lg p-4 bg-slate/10 text-center font-mono text-ivory/70 text-sm flex justify-center gap-6">
-                <span>Add Bacon: $2.00</span>
-                <span class="text-liverpoolRed/30 hidden md:block">|</span>
-                <span>Add Cheese: $2.00 <span class="text-xs opacity-70">(Cheddar, Swiss or Bleu)</span></span>
-                <span class="text-liverpoolRed/30 hidden md:block">|</span>
-                <span>Add Tomato: $1.00</span>
-            </div>
-        </section>
-
-
-        <!-- PUB GRUB -->
-        <section id="pub-grub" class="animate-fade-in-up" style="animation-delay: 0.4s; opacity: 0;">
-            <div class="flex items-center gap-4 mb-4">
-                <div class="h-px bg-slate flex-1"></div>
-                <h2 class="font-drama text-3xl md:text-4xl text-ivory italic text-center">Pub Grub</h2>
-                <div class="h-px bg-slate flex-1"></div>
-            </div>
-            <p class="text-center font-sans text-ivory/50 text-sm mb-12 italic uppercase tracking-widest">For late
-                nights</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Irish Cheese Fries</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Waffle fries covered with cheese sauce,
-                        bacon bits & green onions</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken Wings</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$11.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Plain, Buffalo, Korean BBQ or
-                        Chipotle/Maple</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Mozzarella Sticks</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$10.29</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Served with marinara sauce</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Hummus Plate</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">A helping of plain and roasted red pepper
-                        hummus served with carrots, cucumbers, red peppers & pita chips</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Bavarian Pretzel</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Salted Pretzel bites with a homemade
-                        spicy, beer-cheese sauce for dipping</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Curry Fries</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$7.29</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">“Chips” smothered in curry sauce</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Spinach Dip</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Baby spinach, artichoke hearts, parmesan
-                        & cream cheese served with pita chips</p>
-                </article>
-
-                <article class="group">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Chicken and Chips</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Three tenders & Fries<br />
-                        Plain, Buffalo, Korean BBQ or Chipotle / Maple</p>
-                </article>
-
-                <article class="group md:col-span-2">
-                    <div
-                        class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
-                        <h3 class="font-sans font-bold text-xl text-ivory">Will & Kate Plate</h3>
-                        <span class="font-mono text-liverpoolRed font-bold">$11.99</span>
-                    </div>
-                    <p class="font-sans text-sm text-ivory/60 leading-relaxed">Sausage roll & Cornish pastie served with
-                        a cup of gravy</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- DRINKS -->
-        <section id="drinks" class="animate-fade-in-up" style="animation-delay: 0.5s; opacity: 0;">
-            <div class="flex items-center gap-4 mb-12 mt-16">
-                <div class="h-px bg-slate flex-1"></div>
-                <h2 class="font-drama text-4xl md:text-5xl text-liverpoolRed italic text-center">Proper Pints & Drinks
-                </h2>
-                <div class="h-px bg-slate flex-1"></div>
-            </div>
-
-            <div class="space-y-16">
-                <!-- DRAFT PINTS -->
-                <div>
-                    <h3
-                        class="font-sans font-bold text-2xl text-ivory border-b border-liverpoolRed/50 pb-2 mb-8 uppercase tracking-widest text-center">
-                        Draft Pints</h3>
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center bg-slate/10 p-8 rounded-2xl border border-slate/50">
-                        <div>
-                            <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">English</h4>
-                            <p class="font-sans text-sm text-ivory/80 leading-loose">Old Specked Hen (Nitro) - 5%</p>
-                        </div>
-                        <div>
-                            <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">Irish</h4>
-                            <ul class="font-sans text-sm text-ivory/80 leading-loose space-y-1">
-                                <li>Magners Cider - 4.5%</li>
-                                <li>Harp Lager - 5%</li>
-                                <li>Smithwick's - 4.5%</li>
-                                <li>Guinness Stout - 4.2%</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">Scottish</h4>
-                            <p class="font-sans text-sm text-ivory/80 leading-loose">Belhaven Ale (Nitro) -
-                                5.2%<br /><span class="text-xs italic text-ivory/50">*Out of Stock*</span></p>
-                        </div>
-                    </div>
-                    <div class="mt-8 text-center bg-slate/5 p-6 rounded-2xl border border-slate/30">
-                        <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">Others</h4>
-                        <ul
-                            class="font-sans text-sm text-ivory/80 leading-relaxed grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <li>Bitburger - 4.8% <span class="text-xs opacity-60">(Germany)</span></li>
-                            <li>Carlsberg - 5% <span class="text-xs opacity-60">(Denmark)</span></li>
-                            <li>Allagash White - 5.2%</li>
-                            <li>Firestone Mind Haze IPA - 6.2%</li>
-                            <li>Firestone Union Jack IPA - 7%</li>
-                            <li>Aleworks Tavern Brown Ale - 5%</li>
-                            <li>Port City Porter - 7.5%</li>
-                        </ul>
-                    </div>
+            <!-- SALADS & SOUPS -->
+            <section id="salads-soups" class="animate-fade-in-up" style="animation-delay: 0.1s; opacity: 0;">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="h-px bg-slate flex-1"></div>
+                    <h2 class="font-drama text-3xl md:text-4xl text-ivory italic">Salads & Soups</h2>
+                    <div class="h-px bg-slate flex-1"></div>
                 </div>
 
-                <!-- PINT COMBOS -->
-                <div>
-                    <h3
-                        class="font-sans font-bold text-2xl text-ivory border-b border-liverpoolRed/50 pb-2 mb-4 uppercase tracking-widest text-center">
-                        Pint Combos</h3>
-                    <p class="text-center font-sans text-ivory/60 text-sm mb-8 italic">Try any pint with a splash of
-                        Ribena – just ask for it “Black”</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                        <article class="group">
-                            <h4
-                                class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
-                                Snakebite</h4>
-                            <p class="font-sans text-sm text-ivory/60">1/2 pint of Cider and 1/2 pint of Lager</p>
-                        </article>
-                        <article class="group">
-                            <h4
-                                class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
-                                Black & Tan</h4>
-                            <p class="font-sans text-sm text-ivory/60">1/2 pint of Ale and 1/2 pint of Guinness</p>
-                        </article>
-                        <article class="group">
-                            <h4
-                                class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
-                                Half & Half</h4>
-                            <p class="font-sans text-sm text-ivory/60">1/2 pint of Harp and 1/2 pint of Guinness</p>
-                        </article>
-                        <article class="group">
-                            <h4
-                                class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
-                                Poor Man’s Black Velvet</h4>
-                            <p class="font-sans text-sm text-ivory/60">1/2 pint of Cider and 1/2 pint of Guinness</p>
-                        </article>
-                        <article class="group">
-                            <h4
-                                class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
-                                Black Smith</h4>
-                            <p class="font-sans text-sm text-ivory/60">1/2 pint of Smithwick’s and 1/2 pint of Guinness
-                            </p>
-                        </article>
-                        <article class="group">
-                            <h4
-                                class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
-                                Shandy</h4>
-                            <p class="font-sans text-sm text-ivory/60">pint of beer and splash of 7UP or Ginger Ale</p>
-                        </article>
-                    </div>
+                <div class="space-y-10">
+                    <!-- English Garden Salad -->
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">English Garden Salad *</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$5.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Mixed greens, cucumber, carrots,
+                            tomato &
+                            red onion served with house made croutons and your choice of dressing</p>
+                    </article>
+
+                    <!-- Caesar Salad -->
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Caesar Salad *</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$5.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Crisp Romaine, Parmesan, Croutons &
+                            housemade dresssing<br />
+                            <span class="text-liverpoolRed/80 italic text-xs mt-2 block">* Make Entree Salad ADD Protein
+                                -
+                                Salmon $9 | Grilled Chicken $7 | Grilled Steak $8</span>
+                        </p>
+                    </article>
+
+                    <!-- French Onion -->
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Homemade French Onion</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$4.75 cup / $5.49 bowl</span>
+                        </div>
+                    </article>
+
+                    <!-- Jala Mac -->
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Jala' Mac</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$6.95</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Creamy Mac and Cheese with jalapeno
+                            topped with cheddar and breadcrumbs, baked to perfection</p>
+                    </article>
+
+                    <!-- Chicken Cobb -->
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Chicken Cobb Salad</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.79</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Bed of mixed green topped with your
+                            choice of crispy or grilled chicken breast, garnished with egg, red onion, tomato, bleu
+                            cheese
+                            crumbles & bacon bits</p>
+                    </article>
+
+                    <!-- Steak Salad -->
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Grilled Steak Salad **</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">5oz of grilled flank steak served on
+                            mixed greens with tomato, red onion & croutons served with balsamic vinaigrette</p>
+                    </article>
+                </div>
+            </section>
+
+
+            <!-- HOUSE SPECIALTIES -->
+            <section id="specialties" class="animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="h-px bg-slate flex-1"></div>
+                    <h2 class="font-drama text-3xl md:text-4xl text-ivory italic">House Specialties</h2>
+                    <div class="h-px bg-slate flex-1"></div>
                 </div>
 
-                <!-- WINES, BOTTLES & CANS -->
-                <div>
-                    <h3
-                        class="font-sans font-bold text-2xl text-ivory border-b border-liverpoolRed/50 pb-2 mb-8 uppercase tracking-widest text-center">
-                        Wines, Bottles & Cans</h3>
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-slate/5 p-8 rounded-[2rem] border border-slate/40">
-                        <!-- Wines & Seltzer -->
-                        <div class="space-y-8">
-                            <div>
-                                <div class="flex justify-between items-baseline mb-2">
-                                    <h4 class="font-drama italic text-xl text-liverpoolRed">House Wines</h4>
-                                    <span class="font-mono text-sm text-ivory/70">$7 gls / $24 btl</span>
-                                </div>
-                                <p class="font-sans text-sm text-ivory/60 mb-2">Sycamore Lane, CA</p>
-                                <ul class="font-sans text-sm text-ivory/80 list-disc list-inside">
-                                    <li>Pinot Grigio</li>
-                                    <li>Chardonnay</li>
-                                    <li>Cabernet</li>
-                                    <li>Merlot</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-baseline mb-2">
-                                    <h4 class="font-drama italic text-xl text-liverpoolRed">Featured Wines</h4>
-                                    <span class="font-mono text-sm text-ivory/70">$9 gls / $32 btl</span>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-baseline mb-2">
-                                    <h4 class="font-drama italic text-xl text-liverpoolRed">Hard Seltzer</h4>
-                                    <span class="font-mono text-sm text-ivory/70">$6 can</span>
-                                </div>
-                                <p class="font-sans text-sm text-ivory/80">White Claw Flavored (12oz)</p>
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Cottage Pie</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
                         </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Seasoned ground beef with diced
+                            carrots
+                            baked in a casserole, topped with peas & whipped potatoes</p>
+                    </article>
 
-                        <!-- Bottles & Cans -->
-                        <div class="space-y-8">
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Bangers ‘N’ Mash</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$16.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">English sausages with gravy and
+                            garlic
+                            mashed potatoes & vegetable medley</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Fish ‘N’ Chips</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$14.50</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">A British staple served up by true
+                            Liverpudlians. Flaky white fish deep fried in our homemade beer batter. Served with peas and
+                            “chips”</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Thai Chicken Curry</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Yellow curry with potatoes, peas and
+                            chicken served over rice.<br />
+                            <span class="italic text-xs block mt-1">Served American (milder), English style (hot) or
+                                traditional (fire)</span>
+                        </p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Beckham & Owen</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$15.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">England’s classic scoring combination
+                            served up! Pork sausage roll & beef Cornish pasty with garlic mashed potatoes & vegetable
+                            medley
+                        </p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Butter Chicken</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Indian curry staple, tomato based,
+                            mild
+                            heat served over rice.<br />
+                            <span class="italic text-xs block mt-1">Served American (milder), English style (hot) or
+                                traditional (fire)</span>
+                        </p>
+                    </article>
+
+                    <article class="group md:col-span-2">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Miso Marinated Salmon</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Salmon filet, baked & topped with
+                            wasabi-dill yogurt sauce. Served on rice pilaf with vegetable medley</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- BUTTIES / SANDWICHES -->
+            <section id="sandwiches" class="animate-fade-in-up" style="animation-delay: 0.3s; opacity: 0;">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-px bg-slate flex-1"></div>
+                    <h2 class="font-drama text-3xl md:text-4xl text-ivory italic text-center">Butties / Sandwiches</h2>
+                    <div class="h-px bg-slate flex-1"></div>
+                </div>
+                <p class="text-center font-sans text-ivory/50 text-sm mb-12 italic uppercase tracking-widest">All served
+                    with “chips” (fries)</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Big Duke **</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">8oz. fresh Angus beef grilled to
+                            medium
+                            or well done with lettuce, tomato, red onion, pickle</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Chicken Sandwich</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">
+                            <strong>GRILLED:</strong> Marinated in spiced balsamic on Kaiser roll<br />
+                            <strong>FRIED:</strong> Spicy buttermilk, country seasoning, honey ranch on brioche<br />
+                            <span class="italic text-xs block mt-1">Both topped with lettuce, tomato, red onion,
+                                pickle</span>
+                        </p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Veggie Burger</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Topped with lettuce, tomato, red
+                            onion &
+                            pickle</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">“Grown Up” Grilled Cheese</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Sourdough slathered with parmesan
+                            garlic
+                            butter and filled with Muenster & Havarti cheese</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">London Broil Sandwich</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Rare, thinly sliced London Broil,
+                            Swiss
+                            cheese & horseradish aioli served hot on Brioche Bun with au jus for dipping</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Classic Reuben</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$13.49</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Shaved corned beef, Swiss and
+                            sauerkraut
+                            with thousand island dressing on thick rye bread</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">English Sailor</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$16.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Reuben plus a banger. Try it with
+                            Terry’s
+                            spicy mustard!</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Panini Special</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$12.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Pastrami and Swiss with coleslaw and
+                            Russian Dressing. Served with pickle</p>
+                    </article>
+                </div>
+
+                <div
+                    class="mt-8 border border-slate/50 rounded-lg p-4 bg-slate/10 text-center font-mono text-ivory/70 text-sm flex justify-center gap-6">
+                    <span>Add Bacon: $2.00</span>
+                    <span class="text-liverpoolRed/30 hidden md:block">|</span>
+                    <span>Add Cheese: $2.00 <span class="text-xs opacity-70">(Cheddar, Swiss or Bleu)</span></span>
+                    <span class="text-liverpoolRed/30 hidden md:block">|</span>
+                    <span>Add Tomato: $1.00</span>
+                </div>
+            </section>
+
+
+            <!-- PUB GRUB -->
+            <section id="pub-grub" class="animate-fade-in-up" style="animation-delay: 0.4s; opacity: 0;">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-px bg-slate flex-1"></div>
+                    <h2 class="font-drama text-3xl md:text-4xl text-ivory italic text-center">Pub Grub</h2>
+                    <div class="h-px bg-slate flex-1"></div>
+                </div>
+                <p class="text-center font-sans text-ivory/50 text-sm mb-12 italic uppercase tracking-widest">For late
+                    nights</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Irish Cheese Fries</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Waffle fries covered with cheese
+                            sauce,
+                            bacon bits & green onions</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Chicken Wings</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$11.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Plain, Buffalo, Korean BBQ or
+                            Chipotle/Maple</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Mozzarella Sticks</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$10.29</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Served with marinara sauce</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Hummus Plate</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">A helping of plain and roasted red
+                            pepper
+                            hummus served with carrots, cucumbers, red peppers & pita chips</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Bavarian Pretzel</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$10.79</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Salted Pretzel bites with a homemade
+                            spicy, beer-cheese sauce for dipping</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Curry Fries</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$7.29</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">“Chips” smothered in curry sauce</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Spinach Dip</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Baby spinach, artichoke hearts,
+                            parmesan
+                            & cream cheese served with pita chips</p>
+                    </article>
+
+                    <article class="group">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Chicken and Chips</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$11.79</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Three tenders & Fries<br />
+                            Plain, Buffalo, Korean BBQ or Chipotle / Maple</p>
+                    </article>
+
+                    <article class="group md:col-span-2">
+                        <div
+                            class="flex justify-between items-baseline border-b border-slate/30 pb-2 mb-2 group-hover:border-liverpoolRed/50 transition-colors">
+                            <h3 class="font-sans font-bold text-xl text-ivory">Will & Kate Plate</h3>
+                            <span class="font-mono text-liverpoolRed font-bold">$11.99</span>
+                        </div>
+                        <p class="font-sans text-sm text-ivory/60 leading-relaxed">Sausage roll & Cornish pastie served
+                            with
+                            a cup of gravy</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- DRINKS -->
+            <section id="drinks" class="animate-fade-in-up" style="animation-delay: 0.5s; opacity: 0;">
+                <div class="flex items-center gap-4 mb-12 mt-16">
+                    <div class="h-px bg-slate flex-1"></div>
+                    <h2 class="font-drama text-4xl md:text-5xl text-liverpoolRed italic text-center">Proper Pints &
+                        Drinks
+                    </h2>
+                    <div class="h-px bg-slate flex-1"></div>
+                </div>
+
+                <div class="space-y-16">
+                    <!-- DRAFT PINTS -->
+                    <div>
+                        <h3
+                            class="font-sans font-bold text-2xl text-ivory border-b border-liverpoolRed/50 pb-2 mb-8 uppercase tracking-widest text-center">
+                            Draft Pints</h3>
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center bg-slate/10 p-8 rounded-2xl border border-slate/50">
                             <div>
-                                <h4 class="font-drama italic text-xl text-liverpoolRed mb-2">Domestic</h4>
-                                <p class="font-sans text-sm text-ivory/80 leading-relaxed">Miller Lite, Coors Light,
-                                    Yuengling</p>
-                                <p class="font-sans text-sm text-ivory/80 leading-relaxed mt-1">Blue Moon, PBR man cans
-                                    <span class="text-xs opacity-60">(24oz)</span>
+                                <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">English</h4>
+                                <p class="font-sans text-sm text-ivory/80 leading-loose">Old Specked Hen (Nitro) - 5%
                                 </p>
                             </div>
                             <div>
-                                <h4 class="font-drama italic text-xl text-liverpoolRed mb-2">Imports</h4>
-                                <ul class="font-sans text-sm text-ivory/80 leading-relaxed space-y-2">
-                                    <li>Modelo</li>
-                                    <li>
-                                        <span class="font-bold">Sam Smith Organic:</span><br />
-                                        <span class="text-ivory/60">Nut Brown, Oatmeal Stout, Chocolate Stout, Apple
-                                            Cider, Pear Cider</span>
-                                    </li>
+                                <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">Irish</h4>
+                                <ul class="font-sans text-sm text-ivory/80 leading-loose space-y-1">
+                                    <li>Magners Cider - 4.5%</li>
+                                    <li>Harp Lager - 5%</li>
+                                    <li>Smithwick's - 4.5%</li>
+                                    <li>Guinness Stout - 4.2%</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="font-drama italic text-xl text-liverpoolRed mb-2">Non-Alcoholic</h4>
-                                <ul class="font-sans text-sm text-ivory/80 leading-relaxed space-y-2">
-                                    <li>
-                                        <span class="font-bold">Athletic Brewing:</span><br />
-                                        <span class="text-ivory/60">Upside Dawn Golden, Run Wild IPA</span>
-                                    </li>
-                                    <li>Guinness 0.0</li>
-                                    <li>Bitburger Drive N/A</li>
-                                </ul>
+                                <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">Scottish</h4>
+                                <p class="font-sans text-sm text-ivory/80 leading-loose">Belhaven Ale (Nitro) -
+                                    5.2%<br /><span class="text-xs italic text-ivory/50">*Out of Stock*</span></p>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center bg-slate/5 p-6 rounded-2xl border border-slate/30">
+                            <h4 class="font-drama italic text-xl text-liverpoolRed mb-4">Others</h4>
+                            <ul
+                                class="font-sans text-sm text-ivory/80 leading-relaxed grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <li>Bitburger - 4.8% <span class="text-xs opacity-60">(Germany)</span></li>
+                                <li>Carlsberg - 5% <span class="text-xs opacity-60">(Denmark)</span></li>
+                                <li>Allagash White - 5.2%</li>
+                                <li>Firestone Mind Haze IPA - 6.2%</li>
+                                <li>Firestone Union Jack IPA - 7%</li>
+                                <li>Aleworks Tavern Brown Ale - 5%</li>
+                                <li>Port City Porter - 7.5%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PINT COMBOS -->
+                    <div>
+                        <h3
+                            class="font-sans font-bold text-2xl text-ivory border-b border-liverpoolRed/50 pb-2 mb-4 uppercase tracking-widest text-center">
+                            Pint Combos</h3>
+                        <p class="text-center font-sans text-ivory/60 text-sm mb-8 italic">Try any pint with a splash of
+                            Ribena – just ask for it “Black”</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                            <article class="group">
+                                <h4
+                                    class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
+                                    Snakebite</h4>
+                                <p class="font-sans text-sm text-ivory/60">1/2 pint of Cider and 1/2 pint of Lager</p>
+                            </article>
+                            <article class="group">
+                                <h4
+                                    class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
+                                    Black & Tan</h4>
+                                <p class="font-sans text-sm text-ivory/60">1/2 pint of Ale and 1/2 pint of Guinness</p>
+                            </article>
+                            <article class="group">
+                                <h4
+                                    class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
+                                    Half & Half</h4>
+                                <p class="font-sans text-sm text-ivory/60">1/2 pint of Harp and 1/2 pint of Guinness</p>
+                            </article>
+                            <article class="group">
+                                <h4
+                                    class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
+                                    Poor Man’s Black Velvet</h4>
+                                <p class="font-sans text-sm text-ivory/60">1/2 pint of Cider and 1/2 pint of Guinness
+                                </p>
+                            </article>
+                            <article class="group">
+                                <h4
+                                    class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
+                                    Black Smith</h4>
+                                <p class="font-sans text-sm text-ivory/60">1/2 pint of Smithwick’s and 1/2 pint of
+                                    Guinness
+                                </p>
+                            </article>
+                            <article class="group">
+                                <h4
+                                    class="font-sans font-bold text-lg text-ivory mb-1 group-hover:text-liverpoolRed transition-colors">
+                                    Shandy</h4>
+                                <p class="font-sans text-sm text-ivory/60">pint of beer and splash of 7UP or Ginger Ale
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- WINES, BOTTLES & CANS -->
+                    <div>
+                        <h3
+                            class="font-sans font-bold text-2xl text-ivory border-b border-liverpoolRed/50 pb-2 mb-8 uppercase tracking-widest text-center">
+                            Wines, Bottles & Cans</h3>
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-slate/5 p-8 rounded-[2rem] border border-slate/40">
+                            <!-- Wines & Seltzer -->
+                            <div class="space-y-8">
+                                <div>
+                                    <div class="flex justify-between items-baseline mb-2">
+                                        <h4 class="font-drama italic text-xl text-liverpoolRed">House Wines</h4>
+                                        <span class="font-mono text-sm text-ivory/70">$7 gls / $24 btl</span>
+                                    </div>
+                                    <p class="font-sans text-sm text-ivory/60 mb-2">Sycamore Lane, CA</p>
+                                    <ul class="font-sans text-sm text-ivory/80 list-disc list-inside">
+                                        <li>Pinot Grigio</li>
+                                        <li>Chardonnay</li>
+                                        <li>Cabernet</li>
+                                        <li>Merlot</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-baseline mb-2">
+                                        <h4 class="font-drama italic text-xl text-liverpoolRed">Featured Wines</h4>
+                                        <span class="font-mono text-sm text-ivory/70">$9 gls / $32 btl</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-baseline mb-2">
+                                        <h4 class="font-drama italic text-xl text-liverpoolRed">Hard Seltzer</h4>
+                                        <span class="font-mono text-sm text-ivory/70">$6 can</span>
+                                    </div>
+                                    <p class="font-sans text-sm text-ivory/80">White Claw Flavored (12oz)</p>
+                                </div>
+                            </div>
+
+                            <!-- Bottles & Cans -->
+                            <div class="space-y-8">
+                                <div>
+                                    <h4 class="font-drama italic text-xl text-liverpoolRed mb-2">Domestic</h4>
+                                    <p class="font-sans text-sm text-ivory/80 leading-relaxed">Miller Lite, Coors Light,
+                                        Yuengling</p>
+                                    <p class="font-sans text-sm text-ivory/80 leading-relaxed mt-1">Blue Moon, PBR man
+                                        cans
+                                        <span class="text-xs opacity-60">(24oz)</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-drama italic text-xl text-liverpoolRed mb-2">Imports</h4>
+                                    <ul class="font-sans text-sm text-ivory/80 leading-relaxed space-y-2">
+                                        <li>Modelo</li>
+                                        <li>
+                                            <span class="font-bold">Sam Smith Organic:</span><br />
+                                            <span class="text-ivory/60">Nut Brown, Oatmeal Stout, Chocolate Stout, Apple
+                                                Cider, Pear Cider</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-drama italic text-xl text-liverpoolRed mb-2">Non-Alcoholic</h4>
+                                    <ul class="font-sans text-sm text-ivory/80 leading-relaxed space-y-2">
+                                        <li>
+                                            <span class="font-bold">Athletic Brewing:</span><br />
+                                            <span class="text-ivory/60">Upside Dawn Golden, Run Wild IPA</span>
+                                        </li>
+                                        <li>Guinness 0.0</li>
+                                        <li>Bitburger Drive N/A</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
+        </main>
 
-    <!-- Footer Back link -->
-    <footer class="mt-24">
-        <a href="index.html"
-            class="inline-flex items-center gap-2 text-ivory hover:text-liverpoolRed font-mono text-sm transition-colors border border-slate/50 hover:border-liverpoolRed/50 rounded-full px-6 py-3 bg-slate/10">
-            ← Return to Pub
-        </a>
-    </footer>
+        <!-- Footer Back link -->
+        <footer class="mt-24">
+            <a href="index.html"
+                class="inline-flex items-center gap-2 text-ivory hover:text-liverpoolRed font-mono text-sm transition-colors border border-slate/50 hover:border-liverpoolRed/50 rounded-full px-6 py-3 bg-slate/10">
+                ← Return to Pub
+            </a>
+        </footer>
+    </div>
 
     <script src="transitions.js"></script>
 </body>
