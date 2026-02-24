@@ -147,11 +147,16 @@ function App() {
     // Feature 1.5: Food Shuffler (Pub Grub)
     const FoodShufflerCard = () => {
         const [items, setItems] = useState([
-            { name: "FISH ‘N’ CHIPS", price: "$10.99", desc: "A British staple served up by true Liver-pudlians. Flaky white fish deep fried in our homemade beer batter & served fresh “chip”" },
-            { name: "COTTAGE PIE", price: "$14.99", desc: "Ground beef with diced carrots baked in a casserole, topped with peas & whipped potatoes" },
-            { name: "BANGERS ‘N’ MASH", price: "$14.99", desc: "English sausages with gravy and garlic mashed potatoes & vegetable medley" },
-            { name: "BECKHAM & OWEN", price: "$13.99", desc: "England’s classic scoring combination served up! Pork sausage roll & beef Cornish pasty with garlic mashed potatoes & vegetable medley" },
-            { name: "CHICKEN CURRY", price: "Varies", desc: "Our traditional curry served over rice and fries, served American (milder) or English style (hot)" }
+            { id: 1, name: "FISH ‘N’ CHIPS" },
+            { id: 2, name: "COTTAGE PIE" },
+            { id: 3, name: "BANGERS ‘N’ MASH" },
+            { id: 4, name: "BECKHAM & OWEN" },
+            { id: 5, name: "CHICKEN CURRY" },
+            { id: 6, name: "FISH ‘N’ CHIPS" },
+            { id: 7, name: "COTTAGE PIE" },
+            { id: 8, name: "BANGERS ‘N’ MASH" },
+            { id: 9, name: "BECKHAM & OWEN" },
+            { id: 10, name: "CHICKEN CURRY" }
         ]);
 
         useEffect(() => {
@@ -176,7 +181,7 @@ function App() {
                     {items.slice(0, 5).map((item, i) => {
                         const isPrimary = i === 0;
                         return (
-                            <div key={item.name}
+                            <div key={item.id}
                                 className={`absolute w-full border p-4 rounded-xl transition-all duration-700 ease-in-out ${isPrimary ? 'bg-[#1a0508] border-liverpoolRed/50 shadow-[0_0_15px_rgba(200,16,46,0.2)] text-liverpoolRed font-bold' : 'bg-[#111] border-slate text-ivory'}`}
                                 style={{
                                     bottom: `${i * 15}px`,
