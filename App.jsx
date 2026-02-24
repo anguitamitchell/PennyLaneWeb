@@ -322,7 +322,7 @@ function App() {
                             <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">A Corner of Liverpool in Virginia.</h2>
                         </div>
                         <p className="font-sans text-ivory/70 text-lg leading-relaxed">
-                            Established with the soul of Merseyside, Penny Lane isn't just a theme bar; it's a genuine public house. For decades, we've poured the perfect pint, served the finest authentic fare, and welcomed everyone as family. Whether you're here for the football or a quiet ale, you're home.
+                            Terry, Rose, Terence, and Lisa — and in a few years, Kate, Evan, and Landon — invite you to join the family here in their corner of Liverpool. Penny Lane is a tribute to all things English, from the beers on tap to the football on the telly to the memorabilia that fills every square inch of the pub. Enjoy a bite or a pint from the best tap selection in Central Virginia. Relax downstairs at the bar with old mates, while making some new ones. Play darts or pool upstairs. Savor a fab meal. Hold a meeting or celebrate a special occasion in our private dining room. You don’t have to be a “Scouse” to feel at home here, but you’ll feel a little like one by the time you leave.
                         </p>
                         <div className="pt-4">
                             <SchedulerCard />
