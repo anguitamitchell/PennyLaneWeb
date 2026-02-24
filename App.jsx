@@ -47,6 +47,17 @@ function App() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Page Transition Entry
+    useEffect(() => {
+        const wrapper = document.getElementById('transition-wrapper');
+        if (wrapper) {
+            // Already has 'enter' class from JSX, just add 'active' slightly delayed
+            setTimeout(() => {
+                wrapper.classList.add('page-transition-enter-active');
+            }, 50);
+        }
+    }, []);
+
     // -------------------------------------
     // GSAP Lifecycle
     // -------------------------------------
