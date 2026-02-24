@@ -318,191 +318,193 @@ function App() {
                 </div>
             </nav>
 
-            {/* --- HERO SECTION --- */}
-            <section className="relative h-[100dvh] flex items-end pb-24 md:pb-32 px-6 md:px-16 lg:px-24">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="./header-group.jpg"
-                        alt="Pub Interior"
-                        className="w-full h-full object-cover object-bottom"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent"></div>
-                </div>
-
-                <div className="relative z-10 max-w-4xl">
-                    <div className="overflow-hidden">
-                        <h1
-                            ref={el => heroTextsRef.current[0] = el}
-                            className="font-sans font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight text-ivory mb-2"
-                        >
-                            A taste of Liverpool
-                        </h1>
-                    </div>
-                    <div className="overflow-hidden mb-8">
-                        <h2
-                            ref={el => heroTextsRef.current[1] = el}
-                            className="font-drama italic text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] text-liverpoolRed drop-shadow-2xl"
-                        >
-                            in Richmond.
-                        </h2>
-                    </div>
-                    <div className="overflow-hidden flex gap-4">
-                        <a
-                            href="menu.html"
-                            ref={el => heroTextsRef.current[2] = el}
-                            className="bg-liverpoolRed text-white px-8 py-4 rounded-full text-lg font-bold btn-magnetic shadow-lg shadow-liverpoolRed/20 hover:shadow-liverpoolRed/40 transition-all inline-block"
-                        >
-                            View the Menu
-                        </a>
-                        <button
-                            ref={el => heroTextsRef.current[3] = el}
-                            className="bg-slate/50 backdrop-blur-md border border-slate text-ivory px-8 py-4 rounded-full text-lg font-medium btn-magnetic hover:bg-slate transition-all"
-                        >
-                            Upcoming Matches
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- THE FOUNDATION (Culture & Hours) --- */}
-            <section id="features" className="py-24 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-8">
-                        <div>
-                            <span className="font-mono text-liverpoolRed mb-4 border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">OUR HOME</span>
-                            <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">A Corner of Liverpool in Virginia.</h2>
-                        </div>
-                        <p className="font-sans text-ivory/70 text-lg leading-relaxed">
-                            Terry, Rose, Terence, and Lisa — and in a few years, Kate, Evan, and Landon — invite you to join the family here in their corner of Liverpool. Penny Lane is a tribute to all things English, from the beers on tap to the football on the telly to the memorabilia that fills every square inch of the pub. Enjoy a bite or a pint from the best tap selection in Central Virginia. Relax downstairs at the bar with old mates, while making some new ones. Play darts or pool upstairs. Savor a fab meal. Hold a meeting or celebrate a special occasion in our private dining room. You don’t have to be a “Scouse” to feel at home here, but you’ll feel a little like one by the time you leave.
-                        </p>
-                        <div className="pt-4">
-                            <SchedulerCard />
-                        </div>
-                    </div>
-                    <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
+            <div id="transition-wrapper" className="page-transition-enter">
+                {/* --- HERO SECTION --- */}
+                <section className="relative h-[100dvh] flex items-end pb-24 md:pb-32 px-6 md:px-16 lg:px-24">
+                    <div className="absolute inset-0 z-0">
                         <img
-                            src="./corner-interior.jpg"
-                            alt="Pub Atmosphere"
-                            className="w-full h-full object-cover transition-all duration-700"
+                            src="./header-group.jpg"
+                            alt="Pub Interior"
+                            className="w-full h-full object-cover object-bottom"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent"></div>
                     </div>
-                </div>
-            </section>
 
-            {/* --- THE FARE (Food & Drink) --- */}
-            <section className="py-24 px-6 md:px-16 lg:px-24 bg-slate/10 border-y border-slate">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div className="order-2 lg:order-1 relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group">
-                        <img
-                            src="./guinness-stout.jpg"
-                            alt="Proper Pint and Food"
-                            className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent"></div>
-                    </div>
-                    <div className="order-1 lg:order-2 space-y-8">
-                        <div>
-                            <span className="font-mono text-liverpoolRed mb-4 border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">THE PROPER PINT</span>
-                            <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">British Classics.</h2>
+                    <div className="relative z-10 max-w-4xl">
+                        <div className="overflow-hidden">
+                            <h1
+                                ref={el => heroTextsRef.current[0] = el}
+                                className="font-sans font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight text-ivory mb-2"
+                            >
+                                A taste of Liverpool
+                            </h1>
                         </div>
-                        <p className="font-sans text-ivory/70 text-lg leading-relaxed mb-4">
-                            Our draft lines flow with the finest imports straight from the UK. Pair your pint with our renowned savory Cottage Pie with golden mash, or the flaky white fish deep fried in our homemade beer batter, classic Fish & Chips.
-                        </p>
-                        <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6 w-full max-w-[800px]">
-                            <ShufflerCard />
-                            <FoodShufflerCard />
+                        <div className="overflow-hidden mb-8">
+                            <h2
+                                ref={el => heroTextsRef.current[1] = el}
+                                className="font-drama italic text-5xl md:text-7xl lg:text-[7rem] leading-[0.9] text-liverpoolRed drop-shadow-2xl"
+                            >
+                                in Richmond.
+                            </h2>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- BEN'S FRIENDS --- */}
-            <section className="py-32 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto relative">
-                <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-liverpoolRed/5 blur-[150px] rounded-full pointer-events-none"></div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
-                    <div className="bg-obsidian border border-slate p-12 rounded-[2rem] shadow-2xl flex items-center justify-center">
-                        <img
-                            src="./bens-friends-logo.png"
-                            alt="Ben's Friends Logo"
-                            className="max-w-xs w-full object-contain"
-                        />
-                    </div>
-                    <div className="space-y-6">
-                        <span className="font-mono text-liverpoolRed border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">COMMUNITY</span>
-                        <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">Ben’s Friends Meet at the Pub on Mondays.</h2>
-                        <p className="font-sans text-ivory/70 text-lg leading-relaxed">
-                            Ben’s Friends is a support group for food and beverage industry professionals who struggle with addiction and substance abuse.
-                        </p>
-                        <a
-                            href="https://www.bensfriendshope.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 mt-4 text-ivory hover:text-liverpoolRed font-mono text-sm transition-colors border border-slate/50 hover:border-liverpoolRed/50 rounded-full px-6 py-3 bg-slate/10"
-                        >
-                            Learn More About Ben's Friends <span className="text-liverpoolRed ml-2">→</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- FOOTER / CTA --- */}
-            <footer className="mt-24 pt-24 pb-12 px-6 md:px-16 lg:px-24 bg-slate/20 rounded-t-[4rem] border-t border-slate">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 md:gap-8 mb-24">
-                    <div className="max-w-md">
-                        <h2 className="font-drama italic text-4xl text-ivory mb-6">Join the Family.</h2>
-                        <button className="bg-liverpoolRed text-white px-8 py-4 rounded-full text-lg font-bold btn-magnetic shadow-lg shadow-liverpoolRed/20 hover:shadow-liverpoolRed/40 transition-all mb-8">
-                            View the Menu
-                        </button>
-                        <div className="flex items-center gap-6 mt-2">
-                            <a href="https://www.instagram.com/pennylanepub421/" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-liverpoolRed transition-colors" aria-label="Instagram">
-                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <div className="overflow-hidden flex gap-4">
+                            <a
+                                href="menu.html"
+                                ref={el => heroTextsRef.current[2] = el}
+                                className="bg-liverpoolRed text-white px-8 py-4 rounded-full text-lg font-bold btn-magnetic shadow-lg shadow-liverpoolRed/20 hover:shadow-liverpoolRed/40 transition-all inline-block"
+                            >
+                                View the Menu
                             </a>
-                            <a href="https://www.facebook.com/PennyLanePubRVA" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-liverpoolRed transition-colors" aria-label="Facebook">
-                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                            </a>
-                            <a href="https://x.com/pennylanepub" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-liverpoolRed transition-colors" aria-label="X (Twitter)">
-                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                            <button
+                                ref={el => heroTextsRef.current[3] = el}
+                                className="bg-slate/50 backdrop-blur-md border border-slate text-ivory px-8 py-4 rounded-full text-lg font-medium btn-magnetic hover:bg-slate transition-all"
+                            >
+                                Upcoming Matches
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                {/* --- THE FOUNDATION (Culture & Hours) --- */}
+                <section id="features" className="py-24 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-8">
+                            <div>
+                                <span className="font-mono text-liverpoolRed mb-4 border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">OUR HOME</span>
+                                <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">A Corner of Liverpool in Virginia.</h2>
+                            </div>
+                            <p className="font-sans text-ivory/70 text-lg leading-relaxed">
+                                Terry, Rose, Terence, and Lisa — and in a few years, Kate, Evan, and Landon — invite you to join the family here in their corner of Liverpool. Penny Lane is a tribute to all things English, from the beers on tap to the football on the telly to the memorabilia that fills every square inch of the pub. Enjoy a bite or a pint from the best tap selection in Central Virginia. Relax downstairs at the bar with old mates, while making some new ones. Play darts or pool upstairs. Savor a fab meal. Hold a meeting or celebrate a special occasion in our private dining room. You don’t have to be a “Scouse” to feel at home here, but you’ll feel a little like one by the time you leave.
+                            </p>
+                            <div className="pt-4">
+                                <SchedulerCard />
+                            </div>
+                        </div>
+                        <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
+                            <img
+                                src="./corner-interior.jpg"
+                                alt="Pub Atmosphere"
+                                className="w-full h-full object-cover transition-all duration-700"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                {/* --- THE FARE (Food & Drink) --- */}
+                <section className="py-24 px-6 md:px-16 lg:px-24 bg-slate/10 border-y border-slate">
+                    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div className="order-2 lg:order-1 relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl group">
+                            <img
+                                src="./guinness-stout.jpg"
+                                alt="Proper Pint and Food"
+                                className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent"></div>
+                        </div>
+                        <div className="order-1 lg:order-2 space-y-8">
+                            <div>
+                                <span className="font-mono text-liverpoolRed mb-4 border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">THE PROPER PINT</span>
+                                <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">British Classics.</h2>
+                            </div>
+                            <p className="font-sans text-ivory/70 text-lg leading-relaxed mb-4">
+                                Our draft lines flow with the finest imports straight from the UK. Pair your pint with our renowned savory Cottage Pie with golden mash, or the flaky white fish deep fried in our homemade beer batter, classic Fish & Chips.
+                            </p>
+                            <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6 w-full max-w-[800px]">
+                                <ShufflerCard />
+                                <FoodShufflerCard />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* --- BEN'S FRIENDS --- */}
+                <section className="py-32 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto relative">
+                    <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-liverpoolRed/5 blur-[150px] rounded-full pointer-events-none"></div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+                        <div className="bg-obsidian border border-slate p-12 rounded-[2rem] shadow-2xl flex items-center justify-center">
+                            <img
+                                src="./bens-friends-logo.png"
+                                alt="Ben's Friends Logo"
+                                className="max-w-xs w-full object-contain"
+                            />
+                        </div>
+                        <div className="space-y-6">
+                            <span className="font-mono text-liverpoolRed border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">COMMUNITY</span>
+                            <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">Ben’s Friends Meet at the Pub on Mondays.</h2>
+                            <p className="font-sans text-ivory/70 text-lg leading-relaxed">
+                                Ben’s Friends is a support group for food and beverage industry professionals who struggle with addiction and substance abuse.
+                            </p>
+                            <a
+                                href="https://www.bensfriendshope.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 mt-4 text-ivory hover:text-liverpoolRed font-mono text-sm transition-colors border border-slate/50 hover:border-liverpoolRed/50 rounded-full px-6 py-3 bg-slate/10"
+                            >
+                                Learn More About Ben's Friends <span className="text-liverpoolRed ml-2">→</span>
                             </a>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-12 font-sans">
-                        <div>
-                            <h4 className="text-ivory font-bold mb-4">Contact & Location</h4>
-                            <ul className="text-ivory/60 space-y-2 text-sm">
-                                <li>421 East Franklin Street</li>
-                                <li>Richmond, VA 23219</li>
-                                <li>
-                                    <a href="tel:8047801682" className="hover:text-liverpoolRed transition-colors">804-780-1682</a>
-                                </li>
-                                <li>
-                                    <a href="mailto:PennyLanePubRVA@gmail.com" className="hover:text-liverpoolRed transition-colors break-all">PennyLanePubRVA@gmail.com</a>
-                                </li>
-                            </ul>
+                </section>
+
+                {/* --- FOOTER / CTA --- */}
+                <footer className="mt-24 pt-24 pb-12 px-6 md:px-16 lg:px-24 bg-slate/20 rounded-t-[4rem] border-t border-slate">
+                    <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 md:gap-8 mb-24">
+                        <div className="max-w-md">
+                            <h2 className="font-drama italic text-4xl text-ivory mb-6">Join the Family.</h2>
+                            <button className="bg-liverpoolRed text-white px-8 py-4 rounded-full text-lg font-bold btn-magnetic shadow-lg shadow-liverpoolRed/20 hover:shadow-liverpoolRed/40 transition-all mb-8">
+                                View the Menu
+                            </button>
+                            <div className="flex items-center gap-6 mt-2">
+                                <a href="https://www.instagram.com/pennylanepub421/" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-liverpoolRed transition-colors" aria-label="Instagram">
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                                <a href="https://www.facebook.com/PennyLanePubRVA" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-liverpoolRed transition-colors" aria-label="Facebook">
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                </a>
+                                <a href="https://x.com/pennylanepub" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-liverpoolRed transition-colors" aria-label="X (Twitter)">
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <h4 className="text-ivory font-bold mb-4">Hours</h4>
-                            <ul className="text-ivory/60 space-y-2 text-sm">
-                                <li>Mon: Closed</li>
-                                <li>Tue-Wed: 3PM - 12AM</li>
-                                <li>Thu-Fri: 3PM - 2AM</li>
-                                <li>Sat: 10AM - 2AM</li>
-                                <li>Sun: 9AM - 9PM</li>
-                            </ul>
+                        <div className="grid grid-cols-2 gap-12 font-sans">
+                            <div>
+                                <h4 className="text-ivory font-bold mb-4">Contact & Location</h4>
+                                <ul className="text-ivory/60 space-y-2 text-sm">
+                                    <li>421 East Franklin Street</li>
+                                    <li>Richmond, VA 23219</li>
+                                    <li>
+                                        <a href="tel:8047801682" className="hover:text-liverpoolRed transition-colors">804-780-1682</a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:PennyLanePubRVA@gmail.com" className="hover:text-liverpoolRed transition-colors break-all">PennyLanePubRVA@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 className="text-ivory font-bold mb-4">Hours</h4>
+                                <ul className="text-ivory/60 space-y-2 text-sm">
+                                    <li>Mon: Closed</li>
+                                    <li>Tue-Wed: 3PM - 12AM</li>
+                                    <li>Thu-Fri: 3PM - 2AM</li>
+                                    <li>Sat: 10AM - 2AM</li>
+                                    <li>Sun: 9AM - 9PM</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="max-w-7xl mx-auto border-t border-slate pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-ivory/40 text-sm font-sans">&copy; 2026 Penny Lane Pub - Cinematic.</p>
+                    <div className="max-w-7xl mx-auto border-t border-slate pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-ivory/40 text-sm font-sans">&copy; 2026 Penny Lane Pub - Cinematic.</p>
 
-                    {/* System Operational Indicator */}
-                    <div className="flex items-center gap-3 bg-obsidian px-4 py-2 rounded-full border border-slate">
-                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        <span className="font-mono text-xs text-ivory/60">System Operational</span>
+                        {/* System Operational Indicator */}
+                        <div className="flex items-center gap-3 bg-obsidian px-4 py-2 rounded-full border border-slate">
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                            <span className="font-mono text-xs text-ivory/60">System Operational</span>
+                        </div>
                     </div>
-                </div>
-            </footer>
+                </footer>
+            </div>
 
         </div>
     );
