@@ -144,6 +144,61 @@ function App() {
         );
     };
 
+    // Feature 1.5: Food Shuffler (Pub Grub)
+    const FoodShufflerCard = () => {
+        const [items, setItems] = useState([
+            { name: "FISH ‘N’ CHIPS", price: "$10.99", desc: "A British staple served up by true Liver-pudlians. Flaky white fish deep fried in our homemade beer batter & served fresh “chip”" },
+            { name: "COTTAGE PIE", price: "$14.99", desc: "Ground beef with diced carrots baked in a casserole, topped with peas & whipped potatoes" },
+            { name: "BANGERS ‘N’ MASH", price: "$14.99", desc: "English sausages with gravy and garlic mashed potatoes & vegetable medley" },
+            { name: "BECKHAM & OWEN", price: "$13.99", desc: "England’s classic scoring combination served up! Pork sausage roll & beef Cornish pasty with garlic mashed potatoes & vegetable medley" },
+            { name: "CHICKEN CURRY", price: "Varies", desc: "Our traditional curry served over rice and fries, served American (milder) or English style (hot)" }
+        ]);
+
+        useEffect(() => {
+            const interval = setInterval(() => {
+                setItems(prev => {
+                    const newArr = [...prev];
+                    const last = newArr.pop();
+                    newArr.unshift(last);
+                    return newArr;
+                });
+            }, 3500);
+            return () => clearInterval(interval);
+        }, []);
+
+        return (
+            <div className="bg-obsidian border border-slate rounded-[2rem] p-8 shadow-2xl relative overflow-hidden h-[300px] flex flex-col justify-between">
+                <div>
+                    <h3 className="text-xl font-bold font-sans text-ivory mb-2">Pub Grub</h3>
+                    <p className="text-sm text-ivory/60">A rotating selection of our authentic fare.</p>
+                </div>
+                <div className="relative h-[130px]">
+                    {items.slice(0, 5).map((item, i) => {
+                        const isPrimary = i === 0;
+                        return (
+                            <div key={item.name}
+                                className={`absolute w-full border p-4 rounded-xl transition-all duration-700 ease-in-out flex flex-col justify-center ${isPrimary ? 'bg-[#1a0508] border-liverpoolRed/50 shadow-[0_0_15px_rgba(200,16,46,0.2)]' : 'bg-[#111] border-slate text-ivory'}`}
+                                style={{
+                                    bottom: `${i * 15}px`,
+                                    transform: `scale(${1 - (i * 0.05)})`,
+                                    opacity: 1 - (i * 0.3),
+                                    zIndex: 10 - i,
+                                    height: isPrimary ? 'auto' : '55px',
+                                    minHeight: isPrimary ? '100px' : 'auto'
+                                }}>
+                                <div className="flex justify-between items-start gap-4">
+                                    <span className={`font-drama italic text-[1.05rem] leading-tight ${isPrimary ? 'text-liverpoolRed font-bold' : 'text-ivory line-clamp-1'}`}>{item.name}</span>
+                                    {isPrimary && item.price && <span className="font-mono text-sm font-bold text-liverpoolRed shrink-0">{item.price}</span>}
+                                </div>
+                                {isPrimary && <p className="text-[0.7rem] text-ivory/70 mt-2 font-sans line-clamp-2 leading-relaxed">{item.desc}</p>}
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        );
+    };
+
     // Feature 2: Telemetry Typewriter (Liverpool Stats & Next Match)
     const TypewriterCard = ({ lfcStats, nextMatch }) => {
         const [typed, setTyped] = useState("");
@@ -354,10 +409,13 @@ function App() {
                             <span className="font-mono text-liverpoolRed mb-4 border border-liverpoolRed/30 px-3 py-1 rounded-full text-sm inline-block">THE PROPER PINT</span>
                             <h2 className="font-drama italic text-5xl md:text-6xl text-ivory">British Classics.</h2>
                         </div>
-                        <p className="font-sans text-ivory/70 text-lg leading-relaxed">
+                        <p className="font-sans text-ivory/70 text-lg leading-relaxed mb-4">
                             Our draft lines flow with the finest imports straight from the UK. Pair your pint with our renowned savory Shepherd's Pie with golden mash, or the flawlessly battered, classic Fish & Chips. No shortcuts, just authentic English comfort food.
                         </p>
-                        <ShufflerCard standings={standings} />
+                        <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6 w-full max-w-[800px]">
+                            <ShufflerCard />
+                            <FoodShufflerCard />
+                        </div>
                     </div>
                 </div>
             </section>
