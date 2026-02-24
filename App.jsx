@@ -298,6 +298,7 @@ function App() {
                 <div className="hidden md:flex gap-6 text-sm font-sans font-medium items-center">
                     <a href="index.html#features" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Experience</a>
                     <a href="events.html" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Events</a>
+                    <a href="about.html" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">About</a>
                 </div>
                 <div className="flex items-center gap-6">
                     <div className="hidden lg:flex items-center gap-4">
