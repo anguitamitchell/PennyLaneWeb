@@ -291,12 +291,12 @@ function App() {
         <div ref={comp} className="bg-obsidian text-ivory min-h-screen">
 
             {/* --- NAVBAR --- */}
-            <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 rounded-full px-6 py-3 flex items-center gap-8
+            <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 rounded-full px-6 py-3 flex items-center gap-8 w-max
                 ${scrolled ? 'bg-obsidian/80 backdrop-blur-xl border border-slate shadow-xl' : 'bg-transparent'}
             `}>
-                <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="font-drama font-bold text-xl tracking-wider text-liverpoolRed italic transition-transform hover:scale-105 cursor-pointer">Penny Lane</a>
+                <a href="index.html" className="font-drama font-bold text-xl tracking-wider text-liverpoolRed italic transition-transform hover:scale-105 cursor-pointer whitespace-nowrap">Penny Lane</a>
                 <div className="hidden md:flex gap-6 text-sm font-sans font-medium items-center">
-                    <a href="#features" onClick={(e) => { e.preventDefault(); document.querySelector('#features').scrollIntoView({ behavior: 'smooth' }); }} className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Experience</a>
+                    <a href="index.html#features" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Experience</a>
                     <a href="events.html" className="hover:-translate-y-[1px] transition-transform text-ivory/80 hover:text-ivory cursor-pointer">Events</a>
                 </div>
                 <div className="flex items-center gap-6">
@@ -311,12 +311,8 @@ function App() {
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
                         </a>
                     </div>
-                    <a
-                        href="menu.html"
-                        className="bg-liverpoolRed text-white px-5 py-2 rounded-full text-sm font-bold btn-magnetic overflow-hidden relative group block shrink-0"
-                    >
+                    <a href="menu.html" className="bg-liverpoolRed text-white px-5 py-2 rounded-full text-sm font-bold overflow-hidden relative group block shrink-0 hover:scale-105 transition-transform">
                         <span className="relative z-10">View Menu</span>
-                        <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-full"></span>
                     </a>
                 </div>
             </nav>
