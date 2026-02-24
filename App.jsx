@@ -182,15 +182,9 @@ function App() {
                                     bottom: `${i * 15}px`,
                                     transform: `scale(${1 - (i * 0.05)})`,
                                     opacity: 1 - (i * 0.3),
-                                    zIndex: 10 - i,
-                                    height: isPrimary ? 'auto' : '55px',
-                                    minHeight: isPrimary ? '100px' : 'auto'
+                                    zIndex: 10 - i
                                 }}>
-                                <div className="flex justify-between items-start gap-4">
-                                    <span className={`font-drama italic text-[1.05rem] leading-tight ${isPrimary ? 'text-liverpoolRed font-bold' : 'text-ivory line-clamp-1'}`}>{item.name}</span>
-                                    {isPrimary && item.price && <span className="font-mono text-sm font-bold text-liverpoolRed shrink-0">{item.price}</span>}
-                                </div>
-                                {isPrimary && <p className="text-[0.7rem] text-ivory/70 mt-2 font-sans line-clamp-2 leading-relaxed">{item.desc}</p>}
+                                <span className={`font-drama italic text-lg ${isPrimary ? 'text-liverpoolRed font-bold' : 'text-ivory'}`}>{item.name}</span>
                             </div>
                         )
                     })}
@@ -198,7 +192,6 @@ function App() {
             </div>
         );
     };
-
     // Feature 2: Telemetry Typewriter (Liverpool Stats & Next Match)
     const TypewriterCard = ({ lfcStats, nextMatch }) => {
         const [typed, setTyped] = useState("");
