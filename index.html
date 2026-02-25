@@ -87,6 +87,14 @@
             padding-bottom: 2rem;
         }
 
+        /* Mobile Performance Optimizations */
+        @media (max-width: 768px) {
+            .noise-overlay {
+                display: none;
+                /* Very heavy on mobile scroll */
+            }
+        }
+
         /* Page Transitions */
         .page-transition-enter {
             opacity: 0;
@@ -134,7 +142,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Main React App code -->
-    <script type="text/babel" src="App.jsx"></script>
+    <script type="text/babel" src="App.jsx?v=2"></script>
 
     <script src="transitions.js"></script>
 </body>

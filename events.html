@@ -79,7 +79,7 @@
 
     <!-- Navigation -->
     <nav
-        class="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-obsidian/80 backdrop-blur-xl border border-slate shadow-xl rounded-full px-6 py-3 flex items-center gap-8 w-max transition-all duration-300">
+        class="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-obsidian/95 md:bg-obsidian/80 backdrop-blur-md md:backdrop-blur-xl border border-slate shadow-xl rounded-full px-6 py-3 flex items-center justify-between gap-8 md:w-max w-[95%] max-w-7xl transition-all duration-300">
         <a href="index.html"
             class="font-drama font-bold text-xl tracking-wider text-liverpoolRed italic transition-transform hover:scale-105 cursor-pointer whitespace-nowrap">Penny
             Lane</a>
@@ -121,11 +121,59 @@
                 </a>
             </div>
             <a href="menu.html"
-                class="bg-liverpoolRed text-white px-5 py-2 rounded-full text-sm font-bold overflow-hidden relative group block shrink-0 hover:scale-105 transition-transform">
+                class="hidden md:block bg-liverpoolRed text-white px-5 py-2 rounded-full text-sm font-bold overflow-hidden relative group shrink-0 hover:scale-105 transition-transform">
                 <span class="relative z-10">View Menu</span>
             </a>
+            <!-- Hamburger Button -->
+            <button id="mobile-menu-btn"
+                class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8 z-50 relative group"
+                aria-label="Toggle Menu">
+                <span class="hamburger-line h-0.5 w-6 bg-ivory rounded-full transition-transform duration-300"></span>
+                <span class="hamburger-line h-0.5 w-6 bg-ivory rounded-full transition-opacity duration-300"></span>
+                <span class="hamburger-line h-0.5 w-6 bg-ivory rounded-full transition-transform duration-300"></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-obsidian/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-500 md:hidden opacity-0 pointer-events-none">
+        <div class="flex flex-col items-center gap-8 font-drama text-3xl italic">
+            <a href="index.html#features"
+                class="mobile-link text-ivory hover:text-liverpoolRed transition-colors">Experience</a>
+            <a href="events.html" class="mobile-link text-ivory hover:text-liverpoolRed transition-colors">Events</a>
+            <a href="about.html" class="mobile-link text-ivory hover:text-liverpoolRed transition-colors">About</a>
+            <a href="menu.html" class="mobile-link text-liverpoolRed hover:text-ivory transition-colors mt-4">View
+                Menu</a>
+        </div>
+
+        <div class="flex items-center gap-8 mt-12">
+            <a href="https://www.instagram.com/pennylanepub421/" target="_blank" rel="noopener noreferrer"
+                class="text-ivory/80 hover:text-liverpoolRed transition-colors border border-slate/50 p-3 rounded-full">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/PennyLanePubRVA" target="_blank" rel="noopener noreferrer"
+                class="text-ivory/80 hover:text-liverpoolRed transition-colors border border-slate/50 p-3 rounded-full">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+            </a>
+            <a href="https://x.com/pennylanepub" target="_blank" rel="noopener noreferrer"
+                class="text-ivory/80 hover:text-liverpoolRed transition-colors border border-slate/50 p-3 rounded-full">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
 
     <div id="transition-wrapper" class="page-transition-enter">
         <!-- Header -->
@@ -318,6 +366,36 @@
     </div>
 
     <script src="transitions.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const lines = btn.querySelectorAll('.hamburger-line');
+            const links = menu.querySelectorAll('.mobile-link');
+
+            let isOpen = false;
+
+            const toggleMenu = () => {
+                isOpen = !isOpen;
+                if (isOpen) {
+                    menu.classList.remove('opacity-0', 'pointer-events-none');
+                    menu.classList.add('opacity-100', 'pointer-events-auto');
+                    lines[0].classList.add('rotate-45', 'translate-y-2');
+                    lines[1].classList.add('opacity-0');
+                    lines[2].classList.add('-rotate-45', '-translate-y-2');
+                } else {
+                    menu.classList.remove('opacity-100', 'pointer-events-auto');
+                    menu.classList.add('opacity-0', 'pointer-events-none');
+                    lines[0].classList.remove('rotate-45', 'translate-y-2');
+                    lines[1].classList.remove('opacity-0');
+                    lines[2].classList.remove('-rotate-45', '-translate-y-2');
+                }
+            };
+
+            btn.addEventListener('click', toggleMenu);
+            links.forEach(link => link.addEventListener('click', toggleMenu));
+        });
+    </script>
 </body>
 
 </html>
